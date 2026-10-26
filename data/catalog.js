@@ -1,6 +1,6 @@
 /* StyleWatch catalogue. Updated twice a day by the refresh. */
 window.SW={
- "updated": "26 Oct 2026, 6:00 pm IST",
+ "updated": "26 Oct 2026, 8:00 pm IST",
  "minRating": 4.0,
  "minCount": 50,
  "products": [
@@ -3556,6 +3556,1775 @@ window.SW={
    ],
    "rain": 0,
    "formal": 0
+  },
+  {
+   "sec": "thread",
+   "id": "hrx-raglan",
+   "aud": "men",
+   "cat": "tops",
+   "brand": "HRX by Hrithik Roshan",
+   "name": "Men Advanced Rapid Dry Raglan T-shirt",
+   "short": "HRX Rapid Dry Tee",
+   "price": 287,
+   "mrp": 899,
+   "where": "Myntra",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 26000,
+   "countLabel": "26,000",
+   "use": [
+    "gym",
+    "running",
+    "daily"
+   ],
+   "shape": "tee",
+   "verdict": "Myntra favourite gym tee with 26,000 ratings.",
+   "pros": [
+    "Dries fast",
+    "Very low price on Myntra"
+   ],
+   "cons": [
+    "Polyester, not cotton"
+   ],
+   "url": "https://www.myntra.com/tshirts/hrxbyhrithikroshan/hrx-by-hrithik-roshan-men-white-slim-advanced-rapid-dry-raglan-t-shirt/2314421/buy",
+   "exact": true,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 287
+    }
+   ],
+   "gift": [
+    "him"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "thread",
+   "id": "meesho-myra-set",
+   "aud": "women",
+   "cat": "ethnic",
+   "brand": "Meesho",
+   "name": "Myra Sensational Women Rayon Kurta Set",
+   "short": "Meesho Myra Kurta Set",
+   "price": 465,
+   "mrp": 516,
+   "where": "Meesho",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 109930,
+   "countLabel": "1,09,000+",
+   "use": [
+    "daily",
+    "festival"
+   ],
+   "shape": "kurta",
+   "verdict": "Meesho best seller with over 1 lakh ratings.",
+   "pros": [
+    "1,09,000+ ratings",
+    "Budget price"
+   ],
+   "cons": [
+    "Sizes vary by seller; check the chart"
+   ],
+   "url": "https://www.meesho.com/search?q=Myra%20Sensational%20Women%20Kurta%20Sets",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 465
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "thread",
+   "id": "meesho-jivika",
+   "aud": "women",
+   "cat": "ethnic",
+   "brand": "Meesho",
+   "name": "Women Cotton Jivika Alluring Kurti",
+   "short": "Meesho Jivika Kurti",
+   "price": 285,
+   "mrp": null,
+   "where": "Meesho",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 27295,
+   "countLabel": "27,000+",
+   "use": [
+    "daily",
+    "office"
+   ],
+   "shape": "kurta",
+   "verdict": "Cotton kurti for daily wear under ₹300.",
+   "pros": [
+    "Cotton",
+    "27,000+ ratings"
+   ],
+   "cons": [
+    "Simple design"
+   ],
+   "url": "https://www.meesho.com/search?q=Women%20Cotton%20Jivika%20Alluring%20Kurtis",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 285
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "thread",
+   "id": "dnmx-shorts",
+   "aud": "men",
+   "cat": "casual",
+   "brand": "DNMX",
+   "name": "Men Regular Fit Pull-Up Shorts",
+   "short": "DNMX Shorts",
+   "price": 599,
+   "mrp": null,
+   "where": "AJIO",
+   "seen": "Oct 2026",
+   "rating": 4.1,
+   "count": 311,
+   "countLabel": null,
+   "use": [
+    "daily",
+    "home",
+    "travel"
+   ],
+   "shape": "pants",
+   "verdict": "AJIO best seller for weekends.",
+   "pros": [
+    "Comfortable pull-up waist"
+   ],
+   "cons": [
+    "Offer price often lower at checkout"
+   ],
+   "url": "https://www.ajio.com/search/?text=DNMX%20Men%20Regular%20Fit%20Pull-Up%20Shorts",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 599
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "glam",
+   "id": "nykaa-mtl-lipstick",
+   "aud": "women",
+   "cat": "lips",
+   "brand": "Nykaa Cosmetics",
+   "name": "Matte to Last No Transfer Long Lasting Lipstick",
+   "short": "Nykaa Matte Lipstick",
+   "price": 449,
+   "mrp": 599,
+   "where": "Nykaa",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 5728,
+   "countLabel": "5,700+",
+   "use": [
+    "daily",
+    "party",
+    "functions"
+   ],
+   "shape": "lipstick",
+   "verdict": "Long-lasting matte lipstick from Nykaa.",
+   "pros": [
+    "No-transfer formula",
+    "5,700+ ratings"
+   ],
+   "cons": [
+    "Matte can feel dry"
+   ],
+   "url": "https://www.nykaa.com/nykaa-cosmetics-matte-to-last-lipstick/p/21317427",
+   "exact": true,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 449
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "birthday",
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "glam",
+   "id": "nykaa-mtl-liner",
+   "aud": "women",
+   "cat": "lips",
+   "brand": "Nykaa Cosmetics",
+   "name": "Matte to Last Lip Liner",
+   "short": "Nykaa Lip Liner",
+   "price": 194,
+   "mrp": 299,
+   "where": "Nykaa",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 1753,
+   "countLabel": "1,700+",
+   "use": [
+    "daily",
+    "party"
+   ],
+   "shape": "pencil",
+   "verdict": "Creamy, long-lasting lip liner.",
+   "pros": [
+    "Rated 4.3 by 1,700+ buyers"
+   ],
+   "cons": [
+    "Shade range varies"
+   ],
+   "url": "https://www.nykaa.com/nykaa-cosmetics-matte-to-last-lip-liner/p/23065390",
+   "exact": true,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 194
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "at-valex",
+   "aud": "unisex",
+   "cat": "backpacks",
+   "brand": "American Tourister",
+   "name": "Valex+ 36L Laptop Backpack (17\")",
+   "short": "AT Valex+ 36L",
+   "price": 899,
+   "mrp": 2600,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 12400,
+   "countLabel": "12,400+",
+   "use": [
+    "college",
+    "office",
+    "travel"
+   ],
+   "shape": "backpack",
+   "verdict": "Best-value laptop backpack, 12,000+ ratings.",
+   "pros": [
+    "3 compartments",
+    "1-year global warranty"
+   ],
+   "cons": [
+    "Not fully waterproof"
+   ],
+   "url": "https://www.amazon.in/s?k=American+Tourister+Valex%2B+36L+Laptop+Backpack+%2817%22%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 899
+    }
+   ],
+   "gift": [
+    "him",
+    "her"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "at-fizz",
+   "aud": "unisex",
+   "cat": "backpacks",
+   "brand": "American Tourister",
+   "name": "Fizz 32L Backpack with Bottle Pocket",
+   "short": "AT Fizz 32L",
+   "price": 899,
+   "mrp": 2300,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.1,
+   "count": 28598,
+   "countLabel": "28,000+",
+   "use": [
+    "college",
+    "school",
+    "travel"
+   ],
+   "shape": "backpack",
+   "verdict": "Most-reviewed backpack in India.",
+   "pros": [
+    "28,000+ ratings",
+    "Water resistant"
+   ],
+   "cons": [
+    "Basic padding"
+   ],
+   "url": "https://www.amazon.in/s?k=American+Tourister+Fizz+32L+Backpack+with+Bottle+Pocket",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 899
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "wc-44l",
+   "aud": "unisex",
+   "cat": "backpacks",
+   "brand": "Wildcraft",
+   "name": "Nylon 44L Casual Backpack",
+   "short": "Wildcraft 44L",
+   "price": 1490,
+   "mrp": 2149,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 7200,
+   "countLabel": "7,200+",
+   "use": [
+    "travel",
+    "college"
+   ],
+   "shape": "backpack",
+   "verdict": "Tough Wildcraft bag for trips and daily use.",
+   "pros": [
+    "7,200+ ratings",
+    "Large 44 L"
+   ],
+   "cons": [
+    "No laptop sleeve"
+   ],
+   "url": "https://www.amazon.in/s?k=Wildcraft+Nylon+44L+Casual+Backpack",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1490
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "safari-45",
+   "aud": "unisex",
+   "cat": "travel",
+   "brand": "Safari",
+   "name": "45L Expandable Overnighter Travel Backpack",
+   "short": "Safari 45L Overnighter",
+   "price": 1199,
+   "mrp": 3699,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.4,
+   "count": 10800,
+   "countLabel": "10,800+",
+   "use": [
+    "travel",
+    "office"
+   ],
+   "shape": "backpack",
+   "verdict": "Overnighter that replaces a small suitcase.",
+   "pros": [
+    "Suitcase-style compartment",
+    "Rated 4.4"
+   ],
+   "cons": [
+    "Heavy when full"
+   ],
+   "url": "https://www.amazon.in/s?k=Safari+45L+Expandable+Overnighter+Travel+Backpack",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1199
+    }
+   ],
+   "gift": [
+    "him"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "lavie-broxa",
+   "aud": "women",
+   "cat": "slings",
+   "brand": "Lavie",
+   "name": "Broxa Flap Crossbody Sling Bag",
+   "short": "Lavie Broxa Sling",
+   "price": 799,
+   "mrp": 3199,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.1,
+   "count": 7400,
+   "countLabel": "7,400+",
+   "use": [
+    "daily",
+    "party",
+    "travel"
+   ],
+   "shape": "sling",
+   "verdict": "Best-selling Lavie sling bag.",
+   "pros": [
+    "7,400+ ratings",
+    "500+ bought a month"
+   ],
+   "cons": [
+    "Small inside"
+   ],
+   "url": "https://www.amazon.in/s?k=Lavie+Broxa+Flap+Crossbody+Sling+Bag",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 799
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "birthday",
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "lavie-emberlyn",
+   "aud": "women",
+   "cat": "slings",
+   "brand": "Lavie",
+   "name": "Emberlyn Crossbody Sling Bag",
+   "short": "Lavie Emberlyn Sling",
+   "price": 949,
+   "mrp": 2799,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.1,
+   "count": 615,
+   "countLabel": null,
+   "use": [
+    "daily",
+    "party"
+   ],
+   "shape": "sling",
+   "verdict": "Neat crossbody for outings.",
+   "pros": [
+    "Rated 4.1"
+   ],
+   "cons": [
+    "Few colour options"
+   ],
+   "url": "https://www.amazon.in/s?k=Lavie+Emberlyn+Crossbody+Sling+Bag",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 949
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "lavie-malnov",
+   "aud": "women",
+   "cat": "handbags",
+   "brand": "Lavie",
+   "name": "Malnov Tote Bag",
+   "short": "Lavie Malnov Tote",
+   "price": 1099,
+   "mrp": 3599,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.2,
+   "count": 11900,
+   "countLabel": "11,900+",
+   "use": [
+    "office",
+    "daily"
+   ],
+   "shape": "tote",
+   "verdict": "Roomy tote for office and college.",
+   "pros": [
+    "11,900+ ratings",
+    "Fits a lot"
+   ],
+   "cons": [
+    "No laptop padding"
+   ],
+   "url": "https://www.amazon.in/s?k=Lavie+Malnov+Tote+Bag",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1099
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "birthday",
+    "anniversary"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "lavie-ushawu",
+   "aud": "women",
+   "cat": "handbags",
+   "brand": "Lavie",
+   "name": "Ushawu Medium Satchel Handbag",
+   "short": "Lavie Ushawu Satchel",
+   "price": 1440,
+   "mrp": 4799,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.1,
+   "count": 7700,
+   "countLabel": "7,700+",
+   "use": [
+    "office",
+    "functions"
+   ],
+   "shape": "tote",
+   "verdict": "Structured satchel that looks smart at work.",
+   "pros": [
+    "7,700+ ratings"
+   ],
+   "cons": [
+    "Medium size only"
+   ],
+   "url": "https://www.amazon.in/s?k=Lavie+Ushawu+Medium+Satchel+Handbag",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1440
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "anniversary"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "casio-a158",
+   "aud": "unisex",
+   "cat": "watches",
+   "brand": "Casio",
+   "name": "Vintage A-158WA-1Q Digital Watch",
+   "short": "Casio Vintage A158",
+   "price": 1894,
+   "mrp": 1895,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.4,
+   "count": 57500,
+   "countLabel": "57,000+",
+   "use": [
+    "daily",
+    "office"
+   ],
+   "shape": "watch",
+   "verdict": "Iconic retro steel watch, 57,000+ ratings.",
+   "pros": [
+    "Alarm, stopwatch and light",
+    "Lasts years"
+   ],
+   "cons": [
+    "Small dial"
+   ],
+   "url": "https://www.amazon.in/s?k=Casio+Vintage+A-158WA-1Q+Digital+Watch",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1894
+    }
+   ],
+   "gift": [
+    "him",
+    "her"
+   ],
+   "occ": [
+    "birthday",
+    "anniversary"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "fastrack-unisex",
+   "aud": "unisex",
+   "cat": "watches",
+   "brand": "Fastrack",
+   "name": "Analog Unisex Watch",
+   "short": "Fastrack Analog",
+   "price": 749,
+   "mrp": 850,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.1,
+   "count": 16200,
+   "countLabel": "16,000+",
+   "use": [
+    "daily",
+    "college"
+   ],
+   "shape": "watch",
+   "verdict": "Cheapest well-rated branded watch.",
+   "pros": [
+    "16,000+ ratings"
+   ],
+   "cons": [
+    "Plastic case"
+   ],
+   "url": "https://www.amazon.in/s?k=Fastrack+Analog+Unisex+Watch",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 749
+    }
+   ],
+   "gift": [
+    "him",
+    "her"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "fastrack-bare-basics",
+   "aud": "men",
+   "cat": "watches",
+   "brand": "Fastrack",
+   "name": "Bare Basics Analog Watch NT3121SM01",
+   "short": "Fastrack Bare Basics",
+   "price": 1994,
+   "mrp": 2195,
+   "where": "Flipkart",
+   "seen": "Aug 2026",
+   "rating": 4.3,
+   "count": 46224,
+   "countLabel": "46,000+",
+   "use": [
+    "office",
+    "daily"
+   ],
+   "shape": "watch",
+   "verdict": "Flipkart favourite with 46,000 ratings.",
+   "pros": [
+    "Steel strap",
+    "2-year warranty"
+   ],
+   "cons": [
+    "Plain dial"
+   ],
+   "url": "https://www.flipkart.com/fastrack-bare-basics-analog-watch-men/p/itmf3zhhpha3mruh",
+   "exact": true,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1994
+    }
+   ],
+   "gift": [
+    "him"
+   ],
+   "occ": [
+    "birthday",
+    "anniversary"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "titan-karishma",
+   "aud": "men",
+   "cat": "watches",
+   "brand": "Titan",
+   "name": "Karishma Analog Black Dial Watch NM1639SM02",
+   "short": "Titan Karishma",
+   "price": 1895,
+   "mrp": 1995,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.4,
+   "count": 3300,
+   "countLabel": "3,300+",
+   "use": [
+    "office",
+    "functions"
+   ],
+   "shape": "watch",
+   "verdict": "Classic Titan for office and gifting.",
+   "pros": [
+    "Rated 4.4",
+    "3,000 bought a month"
+   ],
+   "cons": [
+    "Steel strap needs sizing"
+   ],
+   "url": "https://www.amazon.in/s?k=Titan+Karishma+Analog+Black+Dial+Watch+NM1639SM02",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1895
+    }
+   ],
+   "gift": [
+    "him"
+   ],
+   "occ": [
+    "anniversary",
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "wear",
+   "id": "titan-nt2593",
+   "aud": "women",
+   "cat": "watches",
+   "brand": "Titan",
+   "name": "Quartz Analog Silver Dial Women's Watch NT2593SM01",
+   "short": "Titan Women Silver",
+   "price": 1595,
+   "mrp": null,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.2,
+   "count": 1300,
+   "countLabel": "1,300+",
+   "use": [
+    "office",
+    "functions"
+   ],
+   "shape": "watch",
+   "verdict": "Elegant everyday watch for women.",
+   "pros": [
+    "Rated 4.2 by 1,300 buyers"
+   ],
+   "cons": [
+    "Small dial"
+   ],
+   "url": "https://www.amazon.in/s?k=Titan+Quartz+Analog+Silver+Dial+Women%27s+Watch+NT2593SM01",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 1595
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "anniversary",
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "atomic-habits",
+   "aud": "unisex",
+   "cat": "nonfiction",
+   "brand": "James Clear",
+   "name": "Atomic Habits (paperback)",
+   "short": "Atomic Habits",
+   "price": 449,
+   "mrp": 599,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.6,
+   "count": 113523,
+   "countLabel": "1,13,000+",
+   "use": [
+    "reading",
+    "self-help"
+   ],
+   "shape": "book",
+   "verdict": "India's favourite self-help book.",
+   "pros": [
+    "1,13,000+ ratings",
+    "Practical and easy to read"
+   ],
+   "cons": [
+    "Paperback, not hardcover"
+   ],
+   "url": "https://www.amazon.in/Atomic-Habits-James-Clear/dp/1847941834",
+   "exact": true,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 449
+    }
+   ],
+   "gift": [
+    "him",
+    "her",
+    "family"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "atomic-habits-hindi",
+   "aud": "unisex",
+   "cat": "nonfiction",
+   "brand": "James Clear",
+   "name": "Atomic Habits: Chote Badlav, Asadharan Parinaam (Hindi)",
+   "short": "Atomic Habits Hindi",
+   "price": 278,
+   "mrp": 499,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.5,
+   "count": 5100,
+   "countLabel": "5,100+",
+   "use": [
+    "reading",
+    "self-help"
+   ],
+   "shape": "book",
+   "verdict": "The same bestseller in Hindi.",
+   "pros": [
+    "5,100+ ratings"
+   ],
+   "cons": [
+    "Translation, not original"
+   ],
+   "url": "https://www.amazon.in/s?k=James+Clear+Atomic+Habits%3A+Chote+Badlav%2C+Asadharan+Parinaam+%28Hindi%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 278
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "psychology-money",
+   "aud": "unisex",
+   "cat": "nonfiction",
+   "brand": "Morgan Housel",
+   "name": "The Psychology of Money (paperback)",
+   "short": "Psychology of Money",
+   "price": 264,
+   "mrp": 399,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.6,
+   "count": 84586,
+   "countLabel": "84,000+",
+   "use": [
+    "reading",
+    "money"
+   ],
+   "shape": "book",
+   "verdict": "Best money book for beginners.",
+   "pros": [
+    "84,000+ ratings",
+    "Short chapters"
+   ],
+   "cons": [
+    "Not a step-by-step guide"
+   ],
+   "url": "https://www.amazon.in/Psychology-Money-Morgan-Housel/dp/9390166268",
+   "exact": true,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 264
+    }
+   ],
+   "gift": [
+    "him",
+    "her"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "ikigai",
+   "aud": "unisex",
+   "cat": "nonfiction",
+   "brand": "Héctor García",
+   "name": "Ikigai: The Japanese Secret to a Long and Happy Life",
+   "short": "Ikigai",
+   "price": 290,
+   "mrp": null,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.6,
+   "count": 63490,
+   "countLabel": "63,000+",
+   "use": [
+    "reading",
+    "self-help"
+   ],
+   "shape": "book",
+   "verdict": "Gentle, short read on purpose and happiness.",
+   "pros": [
+    "63,000+ ratings",
+    "Gift-friendly"
+   ],
+   "cons": [
+    "Light on depth"
+   ],
+   "url": "https://www.amazon.in/s?k=H%C3%A9ctor+Garc%C3%ADa+Ikigai%3A+The+Japanese+Secret+to+a+Long+and+Happy+Life",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 290
+    }
+   ],
+   "gift": [
+    "her",
+    "him",
+    "family"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "alchemist",
+   "aud": "unisex",
+   "cat": "fiction",
+   "brand": "Paulo Coelho",
+   "name": "The Alchemist (paperback)",
+   "short": "The Alchemist",
+   "price": 215,
+   "mrp": 399,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.6,
+   "count": 183202,
+   "countLabel": "1,83,000+",
+   "use": [
+    "reading",
+    "fiction"
+   ],
+   "shape": "book",
+   "verdict": "The most-rated novel on Amazon India.",
+   "pros": [
+    "1,83,000+ ratings",
+    "Short and inspiring"
+   ],
+   "cons": [
+    "Simple, fable-like style"
+   ],
+   "url": "https://www.amazon.in/Alchemist-Paulo-Coelho/dp/8172234988",
+   "exact": true,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 215
+    }
+   ],
+   "gift": [
+    "her",
+    "him"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "greatest-4",
+   "aud": "unisex",
+   "cat": "booksets",
+   "brand": "Various",
+   "name": "World's Greatest Books for Personal Growth & Wealth (set of 4)",
+   "short": "Greatest Books Set of 4",
+   "price": 655,
+   "mrp": 1099,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.5,
+   "count": 28000,
+   "countLabel": "28,000",
+   "use": [
+    "reading",
+    "self-help"
+   ],
+   "shape": "books",
+   "verdict": "Four classics in one gift box.",
+   "pros": [
+    "28,000 ratings",
+    "Great gift value"
+   ],
+   "cons": [
+    "Old-fashioned writing style"
+   ],
+   "url": "https://www.amazon.in/s?k=Various+World%27s+Greatest+Books+for+Personal+Growth+%26+Wealth+%28set+of+4%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 655
+    }
+   ],
+   "gift": [
+    "him",
+    "family"
+   ],
+   "occ": [
+    "birthday",
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "bound-found",
+   "aud": "unisex",
+   "cat": "journals",
+   "brand": "BOUND N FOUND",
+   "name": "A5 Dot Grid Journal, 100 GSM, 160 pages",
+   "short": "Bound N Found Journal",
+   "price": 168,
+   "mrp": 460,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.6,
+   "count": 1800,
+   "countLabel": "1,800+",
+   "use": [
+    "journaling",
+    "college"
+   ],
+   "shape": "journal",
+   "verdict": "Best-rated budget dotted journal.",
+   "pros": [
+    "Thick 100 GSM paper",
+    "Rated 4.6"
+   ],
+   "cons": [
+    "Soft cover"
+   ],
+   "url": "https://www.amazon.in/s?k=BOUND+N+FOUND+A5+Dot+Grid+Journal%2C+100+GSM%2C+160+pages",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 168
+    }
+   ],
+   "gift": [
+    "her",
+    "kids"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "papercoal",
+   "aud": "unisex",
+   "cat": "journals",
+   "brand": "PAPERCOAL",
+   "name": "Buckram Hardcover Dot Grid Diary, A5 (192 pages)",
+   "short": "Papercoal Hardcover",
+   "price": 495,
+   "mrp": 595,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.4,
+   "count": 1300,
+   "countLabel": "1,300+",
+   "use": [
+    "journaling",
+    "office"
+   ],
+   "shape": "journal",
+   "verdict": "Premium hardcover diary for office notes.",
+   "pros": [
+    "Hardcover",
+    "1,300+ ratings"
+   ],
+   "cons": [
+    "80 GSM paper"
+   ],
+   "url": "https://www.amazon.in/s?k=PAPERCOAL+Buckram+Hardcover+Dot+Grid+Diary%2C+A5+%28192+pages%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 495
+    }
+   ],
+   "gift": [
+    "him",
+    "her"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "rettacy-3pack",
+   "aud": "unisex",
+   "cat": "journals",
+   "brand": "RETTACY",
+   "name": "Dot Grid Spiral Notebook, 3-pack (480 pages)",
+   "short": "Rettacy 3-Pack",
+   "price": 449,
+   "mrp": 599,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.4,
+   "count": 8000,
+   "countLabel": "8,000",
+   "use": [
+    "journaling",
+    "college"
+   ],
+   "shape": "journal",
+   "verdict": "Three notebooks with thick paper for students.",
+   "pros": [
+    "8,000 ratings",
+    "100 GSM paper"
+   ],
+   "cons": [
+    "Spiral can bend"
+   ],
+   "url": "https://www.amazon.in/s?k=RETTACY+Dot+Grid+Spiral+Notebook%2C+3-pack+%28480+pages%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 449
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "flip",
+   "id": "anupam-fluct",
+   "aud": "unisex",
+   "cat": "journals",
+   "brand": "Anupam",
+   "name": "Fluct A5 Bullet Dotted Journal (160 pages)",
+   "short": "Anupam Fluct Journal",
+   "price": 224,
+   "mrp": 250,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.4,
+   "count": 269,
+   "countLabel": null,
+   "use": [
+    "journaling",
+    "office"
+   ],
+   "shape": "journal",
+   "verdict": "Indian-made journal with pen loop.",
+   "pros": [
+    "Elastic closure and pen loop"
+   ],
+   "cons": [
+    "80 GSM paper"
+   ],
+   "url": "https://www.amazon.in/s?k=Anupam+Fluct+A5+Bullet+Dotted+Journal+%28160+pages%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 224
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "crompton-galaxy",
+   "aud": "unisex",
+   "cat": "lights",
+   "brand": "Crompton",
+   "name": "Galaxy USB Copper Fairy Lights, 100 LED, 10 m",
+   "short": "Crompton Fairy Lights",
+   "price": null,
+   "mrp": null,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.2,
+   "count": 10700,
+   "countLabel": "10,700+",
+   "use": [
+    "bedroom",
+    "festival",
+    "balcony"
+   ],
+   "shape": "lights",
+   "verdict": "Best-rated fairy lights, from a known brand.",
+   "pros": [
+    "10,700+ ratings",
+    "USB powered"
+   ],
+   "cons": [
+    "Price varies, check live"
+   ],
+   "url": "https://www.amazon.in/s?k=Crompton+Galaxy+USB+Copper+Fairy+Lights%2C+100+LED%2C+10+m",
+   "exact": false,
+   "colours": [],
+   "history": [],
+   "gift": [
+    "her",
+    "family"
+   ],
+   "occ": [
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "halonix-rice",
+   "aud": "unisex",
+   "cat": "lights",
+   "brand": "Halonix",
+   "name": "Bliss USB Rice Light, Warm White",
+   "short": "Halonix Rice Light",
+   "price": 119,
+   "mrp": 199,
+   "where": "Amazon",
+   "seen": "Aug 2026",
+   "rating": 4.3,
+   "count": 1100,
+   "countLabel": "1,100+",
+   "use": [
+    "bedroom",
+    "festival"
+   ],
+   "shape": "lights",
+   "verdict": "Cheapest well-rated warm string light.",
+   "pros": [
+    "Rated 4.3",
+    "USB powered"
+   ],
+   "cons": [
+    "Short length"
+   ],
+   "url": "https://www.amazon.in/s?k=Halonix+Bliss+USB+Rice+Light%2C+Warm+White",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 119
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "xergy-battery",
+   "aud": "unisex",
+   "cat": "lights",
+   "brand": "XERGY",
+   "name": "Battery Fairy Lights, 100 LED, 10 m",
+   "short": "Xergy Battery Lights",
+   "price": 259,
+   "mrp": 999,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.1,
+   "count": 1100,
+   "countLabel": "1,100+",
+   "use": [
+    "bedroom",
+    "festival"
+   ],
+   "shape": "lights",
+   "verdict": "No socket needed, so it works anywhere.",
+   "pros": [
+    "Battery powered",
+    "1,100+ ratings"
+   ],
+   "cons": [
+    "Batteries not included"
+   ],
+   "url": "https://www.amazon.in/s?k=XERGY+Battery+Fairy+Lights%2C+100+LED%2C+10+m",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 259
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "one94-curtain",
+   "aud": "unisex",
+   "cat": "lights",
+   "brand": "One94Store",
+   "name": "Fairy Curtain Lights, 300 LED, 8 modes (3×3 m)",
+   "short": "One94 Curtain Lights",
+   "price": 279,
+   "mrp": 999,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.0,
+   "count": 2200,
+   "countLabel": "2,200+",
+   "use": [
+    "bedroom",
+    "festival",
+    "party"
+   ],
+   "shape": "curtain",
+   "verdict": "Instant wall glow for photos and parties.",
+   "pros": [
+    "2,200+ ratings",
+    "8 light modes"
+   ],
+   "cons": [
+    "Needs a big wall"
+   ],
+   "url": "https://www.amazon.in/s?k=One94Store+Fairy+Curtain+Lights%2C+300+LED%2C+8+modes+%283%C3%973+m%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 279
+    }
+   ],
+   "gift": [
+    "her"
+   ],
+   "occ": [
+    "festival",
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "niyamax-3m",
+   "aud": "unisex",
+   "cat": "lights",
+   "brand": "NIYAMAX",
+   "name": "3 m Battery Copper Wire Fairy Lights, 30 LED",
+   "short": "Niyamax Mini Lights",
+   "price": 76,
+   "mrp": 249,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.0,
+   "count": 895,
+   "countLabel": null,
+   "use": [
+    "table",
+    "festival"
+   ],
+   "shape": "lights",
+   "verdict": "Tiny lights for jars and table centrepieces.",
+   "pros": [
+    "Under ₹100",
+    "2,000 bought a month"
+   ],
+   "cons": [
+    "Short 3 m length"
+   ],
+   "url": "https://www.amazon.in/s?k=NIYAMAX+3+m+Battery+Copper+Wire+Fairy+Lights%2C+30+LED",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 76
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "dekorly-8",
+   "aud": "unisex",
+   "cat": "plants",
+   "brand": "Dekorly",
+   "name": "Artificial Eucalyptus Potted Plants (set of 8)",
+   "short": "Dekorly Plants ×8",
+   "price": 299,
+   "mrp": 999,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.2,
+   "count": 13400,
+   "countLabel": "13,400+",
+   "use": [
+    "table",
+    "office",
+    "bedroom"
+   ],
+   "shape": "plant",
+   "verdict": "Eight little plants that never need water.",
+   "pros": [
+    "13,400+ ratings"
+   ],
+   "cons": [
+    "Plastic up close"
+   ],
+   "url": "https://www.amazon.in/s?k=Dekorly+Artificial+Eucalyptus+Potted+Plants+%28set+of+8%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 299
+    }
+   ],
+   "gift": [
+    "her",
+    "family"
+   ],
+   "occ": [
+    "birthday"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "fancymart-vine",
+   "aud": "unisex",
+   "cat": "plants",
+   "brand": "fancymart",
+   "name": "Artificial Hanging Vine Plants with Pot (pack of 2)",
+   "short": "Fancymart Vines",
+   "price": 235,
+   "mrp": 600,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.2,
+   "count": 1300,
+   "countLabel": "1,300+",
+   "use": [
+    "balcony",
+    "bedroom"
+   ],
+   "shape": "plant",
+   "verdict": "Hanging greenery for shelves and walls.",
+   "pros": [
+    "1,300+ ratings"
+   ],
+   "cons": [
+    "Plastic pot"
+   ],
+   "url": "https://www.amazon.in/s?k=fancymart+Artificial+Hanging+Vine+Plants+with+Pot+%28pack+of+2%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 235
+    }
+   ],
+   "gift": [],
+   "occ": [],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "woodart-tray",
+   "aud": "unisex",
+   "cat": "table",
+   "brand": "WOOD ART STORE",
+   "name": "Round Acacia Wood Decorative Tray",
+   "short": "Acacia Wood Tray",
+   "price": 277,
+   "mrp": 1299,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 1700,
+   "countLabel": "1,700+",
+   "use": [
+    "table",
+    "gifting"
+   ],
+   "shape": "tray",
+   "verdict": "Wooden tray for candles and coffee tables.",
+   "pros": [
+    "Real acacia wood",
+    "1,000 bought a month"
+   ],
+   "cons": [
+    "Small size"
+   ],
+   "url": "https://www.amazon.in/s?k=WOOD+ART+STORE+Round+Acacia+Wood+Decorative+Tray",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 277
+    }
+   ],
+   "gift": [
+    "her",
+    "family"
+   ],
+   "occ": [
+    "festival",
+    "anniversary"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "homesake-mosaic",
+   "aud": "unisex",
+   "cat": "candles",
+   "brand": "Homesake",
+   "name": "Mosaic Glass Tealight Holders (pack of 2)",
+   "short": "Mosaic Tealight Holders",
+   "price": 297,
+   "mrp": 2999,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.3,
+   "count": 3600,
+   "countLabel": "3,600+",
+   "use": [
+    "table",
+    "festival"
+   ],
+   "shape": "candle",
+   "verdict": "Colourful glow for Diwali evenings.",
+   "pros": [
+    "3,600+ ratings",
+    "Big discount"
+   ],
+   "cons": [
+    "Candles not included"
+   ],
+   "url": "https://www.amazon.in/s?k=Homesake+Mosaic+Glass+Tealight+Holders+%28pack+of+2%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 297
+    }
+   ],
+   "gift": [
+    "her",
+    "family"
+   ],
+   "occ": [
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
+  },
+  {
+   "sec": "aesthetic",
+   "id": "behoma-pillar",
+   "aud": "unisex",
+   "cat": "candles",
+   "brand": "Behoma",
+   "name": "Metal Pillar Candle Holders, Golden (set of 2)",
+   "short": "Behoma Candle Stands",
+   "price": 999,
+   "mrp": 1999,
+   "where": "Amazon",
+   "seen": "Oct 2026",
+   "rating": 4.6,
+   "count": 179,
+   "countLabel": null,
+   "use": [
+    "table",
+    "functions"
+   ],
+   "shape": "candle",
+   "verdict": "Elegant centrepiece for dining tables.",
+   "pros": [
+    "Rated 4.6",
+    "Handcrafted"
+   ],
+   "cons": [
+    "Candles not included"
+   ],
+   "url": "https://www.amazon.in/s?k=Behoma+Metal+Pillar+Candle+Holders%2C+Golden+%28set+of+2%29",
+   "exact": false,
+   "colours": [],
+   "history": [
+    {
+     "d": "2026-10-26",
+     "p": 999
+    }
+   ],
+   "gift": [
+    "her",
+    "family"
+   ],
+   "occ": [
+    "anniversary",
+    "wedding",
+    "festival"
+   ],
+   "rain": 0,
+   "formal": 0
   }
  ],
  "excluded": {
@@ -3632,6 +5401,44 @@ window.SW={
     "Funskool Chinese Checkers",
     "3.7★ from 137 buyers"
    ]
+  ],
+  "wear": [
+   [
+    "Caprese Yondella Sling Bag",
+    "3.8★ from 1,000 buyers"
+   ],
+   [
+    "Caprese PEMA Sling",
+    "3.8★ from 860 buyers"
+   ],
+   [
+    "Puma Dazzler-type fashion watches",
+    "Mixed listings"
+   ]
+  ],
+  "flip": [
+   [
+    "Ikigai English (other edition)",
+    "4.1★ but a different, cheaper edition"
+   ],
+   [
+    "Hindi book combos from small sellers",
+    "Fewer than 50 ratings"
+   ]
+  ],
+  "aesthetic": [
+   [
+    "One94Store LED Pixel String Light",
+    "3.7–3.8★ from 3,400 buyers"
+   ],
+   [
+    "Lexton Wine Bottle Cork Lights",
+    "3.8★ from 6,000 buyers"
+   ],
+   [
+    "Desidiya Bottle Lights",
+    "3.8★ from 8,100 buyers"
+   ]
   ]
  },
  "offers": [
@@ -3655,6 +5462,13 @@ window.SW={
    "what": "₹500 off carts of ₹2,000+ (new users ₹400 off)",
    "fits": "above ₹2,000",
    "catch": "Valid till 31 Oct."
+  },
+  {
+   "name": "Meesho first order",
+   "where": "Meesho",
+   "what": "Up to 35% extra off your first order during the sale",
+   "fits": "yes",
+   "catch": "First order only."
   },
   {
    "name": "SBI credit and debit cards",
@@ -3700,15 +5514,27 @@ window.SW={
    "status": "live"
   },
   {
+   "store": "Meesho",
+   "sale": "Mega Blockbuster Sale, up to 80% off, extra off on first order",
+   "dates": "From 9 Oct (end not announced)",
+   "status": "live"
+  },
+  {
    "store": "Tata CLiQ",
    "sale": "₹500 off coupon on ₹2,000+ carts",
    "dates": "Till 31 Oct",
    "status": "live"
   },
   {
-   "store": "Nykaa Fashion",
-   "sale": "Diwali sale",
-   "dates": "Late Oct",
+   "store": "Myntra",
+   "sale": "Grand Wedding Gala, 50–80% off",
+   "dates": "About 4–7 Nov",
+   "status": "soon"
+  },
+  {
+   "store": "Myntra",
+   "sale": "Diwali Sale, 50–80% off",
+   "dates": "About 8–12 Nov",
    "status": "soon"
   },
   {
@@ -3718,10 +5544,22 @@ window.SW={
    "status": "soon"
   },
   {
-   "store": "Myntra",
-   "sale": "Diwali sale, HDFC 10% card offer likely",
-   "dates": "About 8–12 Nov",
+   "store": "Nykaa",
+   "sale": "Diwali sale on beauty and fashion",
+   "dates": "Late Oct / early Nov",
    "status": "soon"
+  },
+  {
+   "store": "AJIO",
+   "sale": "All Star Sale",
+   "dates": "7–18 Oct",
+   "status": "ended"
+  },
+  {
+   "store": "Myntra",
+   "sale": "Big Fashion Festival",
+   "dates": "8–25 Oct",
+   "status": "ended"
   },
   {
    "store": "Flipkart",
@@ -3732,9 +5570,10 @@ window.SW={
  ],
  "ticker": [
   "<b>Live</b> AJIO Mega Diwali Sale · 26–31 Oct",
-  "<b>Coupon</b> Tata CLiQ ₹500 off on ₹2,000+ · till 31 Oct",
+  "<b>Live</b> Meesho Mega Blockbuster Sale",
+  "<b>Coming</b> Myntra Diwali Sale · about 8–12 Nov",
+  "<b>Coupon</b> Tata CLiQ ₹500 off on ₹2,000+",
   "<b>Card</b> Flipkart Axis 7.5% back on Myntra",
-  "<b>Coming</b> Myntra Diwali sale · about 8–12 Nov",
   "<b>Diwali</b> 8 Nov"
  ]
 };

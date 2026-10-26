@@ -18,17 +18,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;900&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --mist:#EEF2F1; --paper:#FAFCFB; --ink:#10292B; --muted:#4F6766; --line:#D3DEDC;
+  --mist:#FFFFFF; --paper:#FFFFFF; --soft:#F4F7F6; --ink:#10292B; --muted:#4A6160; --line:#E1E7E6; --shadow:0 1px 2px rgba(16,41,43,.05),0 8px 24px rgba(16,41,43,.07);
   --cognac:#A4561F; --cognac-soft:#F3E2D3; --acc:#246B76; --acc-soft:#D5EAEC;
   --good:#2A7047; --warn:#8F620C; --bad:#A63C29; --heart:#C0392B;
   --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
   --body:"Figtree","Segoe UI",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
   color-scheme:light;
-}
-@media (prefers-color-scheme:dark){
-  :root{--mist:#0C1A1C;--paper:#13262A;--ink:#E4EEEC;--muted:#A3B8B6;--line:#2A4644;--cognac:#E09155;--cognac-soft:#3A2618;
-  --good:#6CC892;--warn:#E6B95A;--bad:#EE8B76;--heart:#FF8A7A;color-scheme:dark}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:76px}
@@ -61,12 +57,14 @@ header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--m
 .nav nav a:hover,.nav nav a[aria-current="page"]{color:var(--ink);background:var(--paper)}
 .nav nav a[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--acc)}
 .wl-link .n{font-family:var(--mono);font-size:.72rem;background:var(--heart);color:#fff;border-radius:99px;padding:0 6px;margin-left:4px}
-@media (max-width:1000px){.nav nav a.sec,.nav nav a.home{display:none}}
+@media (max-width:1500px){.nav nav a.sec{display:none}}
+@media (max-width:1000px){.nav nav a.home{display:none}}
 main h1:focus,main h2:focus{outline:none}
 .secbar{display:none;overflow-x:auto;gap:6px;padding:8px 20px;border-top:1px solid var(--line);scrollbar-width:none}
 .secbar a{flex:none;text-decoration:none;font-weight:700;font-size:.84rem;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--paper)}
 .secbar a[aria-current="page"]{background:var(--ink);color:var(--mist);border-color:var(--ink)}
-@media (max-width:1000px){.secbar{display:flex}}
+@media (max-width:1500px){.secbar{display:flex}}
+@media (min-width:1001px){.secbar{justify-content:center}}
 
 /* ticker */
 .ticker{background:var(--ink);color:var(--mist);overflow:hidden;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em}
@@ -149,7 +147,8 @@ section{padding:52px 0;border-bottom:1px solid var(--line)}
 .scard h3 b{color:var(--c)}
 .scard .what{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .scard p{margin:0;font-size:.9rem;color:var(--muted)}
-.scard .foot{flex-wrap:wrap;margin-top:auto;font-size:.82rem;display:flex;justify-content:space-between;gap:8px;padding-top:8px;border-top:1px dashed var(--line)}
+.scard .foot>*:last-child{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.scard .foot{flex-wrap:nowrap;margin-top:auto;font-size:.82rem;display:flex;justify-content:space-between;gap:8px;padding-top:8px;border-top:1px dashed var(--line)}
 .scard .glow{position:absolute;right:-40px;top:-40px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--c) 30%,transparent),transparent 70%);transition:transform .4s}
 .scard:hover .glow{transform:scale(1.4)}
 .scard.span2{grid-column:span 2}
@@ -264,6 +263,22 @@ footer{padding:34px 0 100px;font-size:.86rem;color:var(--muted)}
 footer .wrap{display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
 .reveal.in{opacity:1;transform:none}
+
+/* white theme polish */
+.scard,.tablebox,.panel,.filters,details.excl,.empty{box-shadow:var(--shadow)}
+.scard:hover{box-shadow:0 2px 4px rgba(16,41,43,.06),0 18px 40px rgba(16,41,43,.12)}
+thead th{background:var(--soft)!important}
+.fld input,.fld select,.fld textarea{background:var(--soft)!important}
+.sizeout div{background:var(--soft)!important}
+tbody tr:hover{background:color-mix(in srgb,var(--acc) 4%,#fff)}
+.scard::after{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:var(--c,var(--acc));opacity:.9}
+.hero{background:radial-gradient(110% 90% at 88% 6%,color-mix(in srgb,var(--acc) 13%,#fff),transparent 62%),radial-gradient(80% 70% at 0% 100%,color-mix(in srgb,var(--cognac) 8%,#fff),transparent 60%),#fff!important}
+details.more{margin-top:2px}
+details.more summary{cursor:pointer;font-size:.8rem;font-weight:700;color:var(--acc);list-style:none;padding:4px 2px}
+details.more summary::-webkit-details-marker{display:none}
+details.more ul{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px;max-width:220px}
+details.more a{display:inline-block;font-size:.76rem;font-weight:700;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:3px 7px;background:var(--soft);color:var(--ink)}
+details.more a:hover{border-color:var(--acc);color:var(--acc)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.ticker .track,.sweep,.float,.hero h1 .c,.orbit .ring,.orbit .moon span{animation:none}.cbar{transition:none}}
 </style>
 </head>
@@ -315,7 +330,7 @@ const $=id=>document.getElementById(id);
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const inr=n=>'₹'+Number(n).toLocaleString('en-IN');
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const DARK=matchMedia('(prefers-color-scheme: dark)').matches;
+const DARK=false;
 const store={get(k,d){try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
 const passes=p=>p.rating!=null&&p.rating>=D.minRating&&(p.count||0)>=D.minCount;
 const P=D.products.filter(passes);
@@ -329,8 +344,11 @@ const CAT={sandals:'Sandals',floaters:'Floaters & rain sandals',flats:'Flats',he
  tops:'T-shirts & polos',shirts:'Shirts',winter:'Sweatshirts',ethnic:'Ethnic wear',western:'Western wear',lounge:'Nightwear',
  earrings:'Earrings',necklaces:'Necklaces',sets:'Jewellery sets',bracelets:'Bracelets',rings:'Rings',
  eyes:'Eyes',face:'Face makeup',skincare:'Sunscreen & skincare',
+ backpacks:'Backpacks',travel:'Travel bags',slings:'Sling bags',handbags:'Handbags & totes',watches:'Watches',lips:'Lips',casual:'Casual wear',
+ nonfiction:'Non-fiction',fiction:'Fiction',booksets:'Book sets',journals:'Journals & notebooks',lights:'Fairy lights',plants:'Artificial plants',table:'Table decor',candles:'Candle holders',
  boardgames:'Board games',cards:'Card games',crafts:'Art & craft',cars:'Cars & tracks',toddler:'Baby & toddler'};
 const USE={rain:'Rain & monsoon',office:'Office',functions:'Functions',festival:'Festivals',wedding:'Weddings',party:'Parties',daily:'Daily wear',home:'Home',walking:'Walking',running:'Running',gym:'Gym',school:'School',sports:'PT & sports',travel:'Travel',
+ college:'College',reading:'Reading','self-help':'Self-help',money:'Money',fiction:'Stories',journaling:'Journaling & notes',bedroom:'Bedroom',balcony:'Balcony',table:'Table & shelf',gifting:'Gifting',
  family:'Family game night',learning:'Learning',crafts:'Crafts',play:'Play',age0:'0–2 years',age3:'3–5 years',age5:'5–7 years',age7:'7–10 years',age10:'10+ years',age15:'Teens & adults'};
 const FOR={her:'For her',him:'For him',kids:'For kids',family:'For the family'};
 const OCC={birthday:'Birthday',anniversary:'Anniversary',festival:'Diwali & festivals',wedding:'Wedding',party:'Party'};
@@ -347,9 +365,25 @@ const ICON={
  glam:`<rect x="8" y="11" width="8" height="10" rx="1.5" fill="currentColor"/><path d="M9 11V7.5L14.5 3.5V11" fill="currentColor" opacity=".6"/><rect x="7" y="10" width="10" height="2" rx="1" fill="currentColor"/>`,
  wonder:`<rect x="3" y="12" width="8" height="8" rx="1.5" fill="currentColor"/><rect x="13" y="12" width="8" height="8" rx="1.5" fill="currentColor" opacity=".55"/><rect x="8" y="4" width="8" height="8" rx="1.5" fill="currentColor" opacity=".8"/><text x="12" y="10.4" font-size="6" text-anchor="middle" fill="var(--paper)" font-family="sans-serif" font-weight="700">A</text>`,
  wrap:`<rect x="3.5" y="9" width="17" height="11.5" rx="1.5" fill="currentColor" opacity=".3"/><rect x="2.5" y="7" width="19" height="4" rx="1" fill="currentColor"/><path d="M12 7v13.5" stroke="currentColor" stroke-width="2.4"/><path d="M12 7c-2-4-6-4-5.5-1.5S11 7 12 7zM12 7c2-4 6-4 5.5-1.5S13 7 12 7z" fill="none" stroke="currentColor" stroke-width="1.6"/>`,
+ wear:`<path d="M8 8V6a4 4 0 0 1 8 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="4" y="8" width="16" height="13" rx="3" fill="currentColor"/><rect x="8" y="13" width="8" height="4" rx="1" fill="var(--paper)" opacity=".85"/>`,
+ flip:`<path d="M12 6.5C9.5 4.8 6 4.5 3 5v13c3-.5 6.5-.2 9 1.5 2.5-1.7 6-2 9-1.5V5c-3-.5-6.5-.2-9 1.5z" fill="currentColor" opacity=".25" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M12 6.5v13" stroke="currentColor" stroke-width="1.6"/><path d="M5.5 9h4M5.5 12h4M14.5 9h4M14.5 12h4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>`,
+ aesthetic:`<circle cx="12" cy="10" r="8" fill="currentColor" opacity=".14"/><path d="M9 15c-1.6-1.2-2.6-3-2.6-5a5.6 5.6 0 0 1 11.2 0c0 2-1 3.8-2.6 5z" fill="currentColor"/><rect x="9" y="16" width="6" height="2" rx="1" fill="currentColor"/><rect x="10" y="19" width="4" height="2" rx="1" fill="currentColor" opacity=".7"/><path d="M12 10v4" stroke="var(--paper)" stroke-width="1.4"/>`,
  deal:`<path d="M3 12.5V4h8.5L21 13.5 12.5 22z" fill="currentColor" opacity=".25" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="7.5" cy="8.5" r="1.6" fill="currentColor"/><text x="13.5" y="16.5" font-size="7" text-anchor="middle" fill="currentColor" font-family="sans-serif" font-weight="800" transform="rotate(45 13.5 14)">₹</text>`};
 const icon=(k,c)=>`<svg viewBox="0 0 24 24" aria-hidden="true" style="color:${c||'currentColor'}">${ICON[k]||''}</svg>`;
 const ART={
+ backpack:`<path d="M88 22a22 22 0 0 1 44 0v6" fill="none" stroke="var(--ink)" stroke-width="5"/><rect x="66" y="26" width="88" height="88" rx="20" fill="var(--acc)"/><rect x="80" y="64" width="60" height="36" rx="8" fill="var(--paper)" opacity=".9"/><path d="M80 76h60" stroke="var(--acc)" stroke-width="3"/><path d="M66 50h88" stroke="var(--paper)" stroke-width="3" opacity=".5"/>`,
+ sling:`<path d="M60 74C60 20 160 20 160 74" fill="none" stroke="var(--ink)" stroke-width="4"/><rect x="58" y="60" width="104" height="54" rx="14" fill="var(--acc)"/><path d="M58 74c30 20 74 20 104 0v-4c0-6-6-10-14-10H72c-8 0-14 4-14 10z" fill="var(--ink)" opacity=".25"/><circle cx="110" cy="84" r="5" fill="#E8C27A"/>`,
+ tote:`<path d="M84 44V30a26 26 0 0 1 52 0v14" fill="none" stroke="var(--ink)" stroke-width="5"/><path d="M58 44h104l-10 70H68z" fill="var(--acc)"/><path d="M58 44h104" stroke="var(--ink)" stroke-width="4"/><rect x="98" y="58" width="24" height="8" rx="2" fill="#E8C27A"/>`,
+ watch:`<rect x="92" y="4" width="36" height="112" rx="10" fill="var(--ink)" opacity=".85"/><circle cx="110" cy="60" r="36" fill="var(--paper)" stroke="var(--acc)" stroke-width="7"/><g stroke="var(--ink)" stroke-linecap="round"><path d="M110 60V38" stroke-width="4"/><path d="M110 60l14 8" stroke-width="4"/><path d="M110 30v4M110 86v4M80 60h4M136 60h4" stroke-width="3"/></g><circle cx="110" cy="60" r="3" fill="var(--cognac)"/>`,
+ book:`<rect x="70" y="12" width="80" height="100" rx="5" fill="var(--acc)"/><rect x="70" y="12" width="12" height="100" fill="var(--ink)" opacity=".3"/><rect x="92" y="34" width="46" height="5" rx="2" fill="var(--paper)"/><rect x="92" y="46" width="32" height="4" rx="2" fill="var(--paper)" opacity=".7"/><path d="M150 18v90" stroke="var(--paper)" stroke-width="3"/>`,
+ books:`<rect x="52" y="30" width="26" height="82" rx="3" fill="var(--acc)"/><rect x="80" y="18" width="30" height="94" rx="3" fill="var(--cognac)"/><rect x="112" y="26" width="24" height="86" rx="3" fill="var(--ink)" opacity=".8"/><rect x="140" y="38" width="30" height="74" rx="3" fill="var(--acc)" opacity=".6" transform="rotate(8 155 75)"/><path d="M56 50h18M84 40h22M116 46h16" stroke="var(--paper)" stroke-width="3"/>`,
+ journal:`<rect x="66" y="12" width="88" height="100" rx="8" fill="var(--paper)" stroke="var(--ink)" stroke-width="4"/><g fill="var(--line)">${Array.from({length:30},(_,i)=>`<circle cx="${80+(i%6)*12}" cy="${30+Math.floor(i/6)*14}" r="1.8"/>`).join('')}</g><rect x="140" y="12" width="6" height="100" fill="var(--acc)"/><path d="M78 90c14-10 26 6 40-4" stroke="var(--acc)" stroke-width="3" fill="none"/>`,
+ lights:`<path d="M10 30C60 70 160 70 210 30" fill="none" stroke="#B8875A" stroke-width="2"/><path d="M10 70c50 40 150 40 200 0" fill="none" stroke="#B8875A" stroke-width="2"/>${[[30,43],[60,56],[90,62],[120,62],[150,56],[180,45],[30,84],[60,96],[90,101],[120,101],[150,96],[180,86]].map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="10" fill="#FFD27A" opacity=".35"/><circle cx="${x}" cy="${y}" r="4" fill="#FFB72E"/>`).join('')}`,
+ curtain:`<path d="M20 14h180" stroke="#B8875A" stroke-width="3"/>${Array.from({length:9},(_,i)=>`<path d="M${30+i*20} 14v${60+((i*37)%40)}" stroke="#B8875A" stroke-width="1"/>`+Array.from({length:4},(_,j)=>`<circle cx="${30+i*20}" cy="${28+j*20}" r="3.5" fill="#FFB72E"/><circle cx="${30+i*20}" cy="${28+j*20}" r="8" fill="#FFD27A" opacity=".3"/>`).join('')).join('')}`,
+ plant:`<path d="M84 80h52l-8 34H92z" fill="var(--cognac)"/><g fill="#4F8A4A"><ellipse cx="96" cy="44" rx="10" ry="22" transform="rotate(-28 96 44)"/><ellipse cx="124" cy="44" rx="10" ry="22" transform="rotate(28 124 44)"/><ellipse cx="110" cy="34" rx="9" ry="26"/><ellipse cx="82" cy="66" rx="8" ry="16" transform="rotate(-60 82 66)"/><ellipse cx="138" cy="66" rx="8" ry="16" transform="rotate(60 138 66)"/></g>`,
+ tray:`<ellipse cx="110" cy="82" rx="90" ry="24" fill="#9A6A3E"/><ellipse cx="110" cy="76" rx="80" ry="18" fill="#C99A6B"/><rect x="76" y="44" width="20" height="30" rx="3" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/><path d="M86 44v-8" stroke="var(--ink)" stroke-width="2"/><ellipse cx="86" cy="30" rx="4" ry="7" fill="#FFB72E"/><circle cx="134" cy="64" r="12" fill="#4F8A4A"/>`,
+ candle:`<g><rect x="70" y="50" width="34" height="56" rx="6" fill="var(--acc)" opacity=".85"/><rect x="118" y="36" width="34" height="70" rx="6" fill="#E8C27A"/></g><path d="M87 50v-8M135 36v-8" stroke="var(--ink)" stroke-width="2"/><ellipse cx="87" cy="34" rx="5" ry="9" fill="#FFB72E"/><ellipse cx="135" cy="20" rx="5" ry="9" fill="#FFB72E"/><circle cx="87" cy="34" r="16" fill="#FFD27A" opacity=".25"/><circle cx="135" cy="20" r="16" fill="#FFD27A" opacity=".25"/>`,
+ lipstick:`<rect x="88" y="62" width="44" height="52" rx="4" fill="var(--ink)"/><rect x="92" y="44" width="36" height="20" rx="2" fill="#E8C27A"/><path d="M96 44V20l28-12v36z" fill="var(--acc)"/>`,
  leather:`<path d="M18 88c0-12 20-18 92-18s92 6 92 18-20 10-92 10-92 2-92-10z" fill="#5B3A22"/><path d="M44 82c4-26 30-44 66-44s62 18 66 44" fill="none" stroke="var(--cognac)" stroke-width="14"/><path d="M70 80c2-20 18-30 40-30s38 10 40 30" fill="none" stroke="var(--cognac)" stroke-width="10"/>`,
  fisher:`<path d="M18 90c0-12 20-18 92-18s92 6 92 18-20 10-92 10-92 2-92-10z" fill="#5B3A22"/><path d="M40 84c0-34 30-56 70-56s70 22 70 56z" fill="var(--cognac)"/><g stroke="#5B3A22" stroke-width="6" stroke-linecap="round"><path d="M70 50v30M95 38v42M120 36v44M145 42v38"/></g>`,
  strap:`<path d="M16 90c0-14 22-20 94-20s94 6 94 20-22 10-94 10-94 4-94-10z" fill="var(--ink)"/><path d="M40 82c6-30 34-46 70-46s64 16 70 46" fill="none" stroke="var(--acc)" stroke-width="14" stroke-linecap="round"/><path d="M66 80c4-18 22-28 44-28s40 10 44 28" fill="none" stroke="var(--acc)" stroke-width="10" stroke-linecap="round" opacity=".8"/>`,
@@ -398,7 +432,10 @@ function spark(h){
   const pts=ps.map((p,i)=>`${(i/(ps.length-1)*W).toFixed(1)},${(H-2-(mx===mn?.5:(p-mn)/(mx-mn))*(H-4)).toFixed(1)}`).join(' ');
   return `<svg class="spark" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Price history: lowest ${inr(mn)}, highest ${inr(mx)}"><polyline points="${pts}" fill="none" stroke="var(--acc)" stroke-width="2"/></svg>${ps[ps.length-1]<=mn?'<small class="ok">Lowest price we have seen</small>':''}`;
 }
-const storesFor=q=>{const e=encodeURIComponent(q);return [['Amazon',`https://www.amazon.in/s?k=${e}`],['Flipkart',`https://www.flipkart.com/search?q=${e}`],['Myntra',`https://www.myntra.com/${q.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`],['AJIO',`https://www.ajio.com/search/?text=${e}`],['Nykaa',`https://www.nykaa.com/search/result/?q=${e}`],['Tata CLiQ',`https://www.tatacliq.com/search/?searchCategory=all&text=${e}`]]};
+const STORES={Amazon:e=>`https://www.amazon.in/s?k=${e}`,Flipkart:e=>`https://www.flipkart.com/search?q=${e}`,Myntra:(e,q)=>`https://www.myntra.com/${q.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')}`,AJIO:e=>`https://www.ajio.com/search/?text=${e}`,Meesho:e=>`https://www.meesho.com/search?q=${e}`,JioMart:e=>`https://www.jiomart.com/search/${e}`,Nykaa:e=>`https://www.nykaa.com/search/result/?q=${e}`,'Tata CLiQ':e=>`https://www.tatacliq.com/search/?searchCategory=all&text=${e}`};
+const STORESBY={sole:['Amazon','Flipkart','Myntra','AJIO','Meesho','Tata CLiQ','JioMart'],thread:['Amazon','Flipkart','Myntra','AJIO','Meesho','JioMart','Tata CLiQ'],wear:['Amazon','Flipkart','Myntra','AJIO','Tata CLiQ','Meesho','JioMart'],gem:['Amazon','Flipkart','Myntra','AJIO','Meesho','Nykaa'],glam:['Amazon','Nykaa','Flipkart','Myntra','Meesho','Tata CLiQ'],flip:['Amazon','Flipkart','Meesho','JioMart'],aesthetic:['Amazon','Flipkart','Meesho','Myntra','JioMart','AJIO'],wonder:['Amazon','Flipkart','Meesho','JioMart','Myntra']};
+const ALLSTORES=['Amazon','Flipkart','Myntra','AJIO','Meesho','JioMart','Nykaa','Tata CLiQ'];
+const storesFor=(q,sec)=>{const e=encodeURIComponent(q);return (STORESBY[sec]||ALLSTORES).map(k=>[k,STORES[k](e,q)])};
 const siteURL=()=>location.href.split('#')[0];
 const shareText=p=>`${B.name} pick: ${p.brand} ${p.name}${p.price?' at '+inr(p.price)+' on '+p.where:''}, rated ${p.rating.toFixed(1)}★ by ${countLabel(p)} buyers. ${p.url}\nCompare more: ${siteURL()}`;
 function setAccent(c){document.documentElement.style.setProperty('--acc',c);document.documentElement.style.setProperty('--acc-soft',`color-mix(in srgb, ${c} 16%, var(--paper))`)}
@@ -406,7 +443,7 @@ function countUp(el){const end=+el.dataset.count||0;if(RM){el.textContent=end.to
 function every(ms,fn){const t=setInterval(fn,ms);timers.push(t)}
 
 /* ================= search ================= */
-const SYN=[[/\b(chappal|chappals|slipper|slippers|floater|floaters|flip ?flops?)\b/,'cat:floaters|cat:sandals'],[/\b(sandal|sandals)\b/,'cat:sandals|cat:floaters'],[/\b(rain|rainy|monsoon|waterproof|wet)\b/,'rain'],[/\b(office|work)\b/,'use:office'],[/\b(formal)\b/,'cat:formal|use:office|cat:shirts'],[/\b(wedding|weddings|bridal)\b/,'use:wedding|use:functions'],[/\b(function|functions|party|event|events)\b/,'use:functions|use:party|use:wedding'],[/\b(festival|festive|diwali|onam)\b/,'use:festival|use:functions'],[/\b(run|running|jog|jogging)\b/,'use:running'],[/\b(walk|walking)\b/,'use:walking'],[/\b(school|uniform)\b/,'cat:school|use:school'],[/\b(pt|sports?|gym|trainer)\b/,'cat:sports'],[/\b(heel|heels|wedge|wedges)\b/,'cat:heels'],[/\b(flat|flats|ballerina)\b/,'cat:flats'],[/\b(shoe|shoes)\b/,'sec:sole'],[/\b(footwear)\b/,'sec:sole'],[/\b(cloth|clothes|clothing|dress|dresses|wear)\b/,'sec:thread'],[/\b(tshirt|t-shirt|tee|tees|polo)\b/,'cat:tops'],[/\b(kurta|kurti|salwar|anarkali|ethnic)\b/,'cat:ethnic'],[/\b(jewellery|jewelry|jewel)\b/,'sec:gem'],[/\b(earring|earrings|studs?)\b/,'cat:earrings'],[/\b(necklace|chain)\b/,'cat:necklaces|cat:sets'],[/\b(silver)\b/,'brand:giva'],[/\b(makeup|make-up|cosmetic|cosmetics|beauty)\b/,'sec:glam'],[/\b(kajal|eyeliner|kohl)\b/,'cat:eyes'],[/\b(sunscreen|spf|sunblock)\b/,'cat:skincare'],[/\b(toy|toys|game|games)\b/,'sec:wonder'],[/\b(board ?games?)\b/,'cat:boardgames'],[/\b(gift|gifts|present)\b/,'gift'],[/\b(men|mens|men's|gents|male|him)\b/,'aud:men'],[/\b(women|womens|women's|ladies|her)\b/,'aud:women'],[/\b(kid|kids|child|children|boys?|girls?)\b/,'aud:kids']];
+const SYN=[[/\b(chappal|chappals|slipper|slippers|floater|floaters|flip ?flops?)\b/,'cat:floaters|cat:sandals'],[/\b(sandal|sandals)\b/,'cat:sandals|cat:floaters'],[/\b(rain|rainy|monsoon|waterproof|wet)\b/,'rain'],[/\b(office|work)\b/,'use:office'],[/\b(formal)\b/,'cat:formal|use:office|cat:shirts'],[/\b(wedding|weddings|bridal)\b/,'use:wedding|use:functions'],[/\b(function|functions|party|event|events)\b/,'use:functions|use:party|use:wedding'],[/\b(festival|festive|diwali|onam)\b/,'use:festival|use:functions'],[/\b(run|running|jog|jogging)\b/,'use:running'],[/\b(walk|walking)\b/,'use:walking'],[/\b(school|uniform)\b/,'cat:school|use:school'],[/\b(pt|sports?|gym|trainer)\b/,'cat:sports'],[/\b(heel|heels|wedge|wedges)\b/,'cat:heels'],[/\b(flat|flats|ballerina)\b/,'cat:flats'],[/\b(shoe|shoes)\b/,'sec:sole'],[/\b(footwear)\b/,'sec:sole'],[/\b(cloth|clothes|clothing|dress|dresses)\b/,'sec:thread'],[/\b(bag|bags)\b/,'sec:wear'],[/\b(backpack|backpacks|rucksack|college bag|laptop bag)\b/,'cat:backpacks|cat:travel'],[/\b(sling|slings|side bag|crossbody|purse)\b/,'cat:slings|cat:handbags'],[/\b(handbag|handbags|tote|totes|satchel)\b/,'cat:handbags'],[/\b(luggage|trolley|suitcase|overnighter)\b/,'cat:travel'],[/\b(watch|watches|wristwatch)\b/,'cat:watches'],[/\b(book|books|novel|novels|read|reading)\b/,'sec:flip'],[/\b(fiction|story|stories)\b/,'cat:fiction'],[/\b(non-?fiction|self ?help|self-help)\b/,'cat:nonfiction'],[/\b(journal|journals|diary|notebook|notebooks|notes)\b/,'cat:journals'],[/\b(decor|decoration|aesthetic|home decor|room)\b/,'sec:aesthetic'],[/\b(fairy|lights?|string lights?|led)\b/,'cat:lights'],[/\b(candle|candles|tealight|diya)\b/,'cat:candles'],[/\b(plant|plants|greenery)\b/,'cat:plants'],[/\b(lipstick|lip)\b/,'cat:lips'],[/\b(tshirt|t-shirt|tee|tees|polo)\b/,'cat:tops'],[/\b(kurta|kurti|salwar|anarkali|ethnic)\b/,'cat:ethnic'],[/\b(jewellery|jewelry|jewel)\b/,'sec:gem'],[/\b(earring|earrings|studs?)\b/,'cat:earrings'],[/\b(necklace|chain)\b/,'cat:necklaces|cat:sets'],[/\b(silver)\b/,'brand:giva'],[/\b(makeup|make-up|cosmetic|cosmetics|beauty)\b/,'sec:glam'],[/\b(kajal|eyeliner|kohl)\b/,'cat:eyes'],[/\b(sunscreen|spf|sunblock)\b/,'cat:skincare'],[/\b(toy|toys|game|games)\b/,'sec:wonder'],[/\b(board ?games?)\b/,'cat:boardgames'],[/\b(gift|gifts|present)\b/,'gift'],[/\b(men|mens|men's|gents|male|him)\b/,'aud:men'],[/\b(women|womens|women's|ladies|her)\b/,'aud:women'],[/\b(kid|kids|child|children|boys?|girls?)\b/,'aud:kids']];
 function matchQ(p,q){
   q=(q||'').toLowerCase().trim(); if(!q) return true;
   const hay=(p.brand+' '+p.name+' '+(CAT[p.cat]||'')+' '+p.use.map(u=>USE[u]||u).join(' ')+' '+(p.colours||[]).join(' ')+' '+p.aud+' '+SEC[p.sec].what).toLowerCase();
@@ -447,6 +484,7 @@ function row(p,opts={}){
      <button type="button" class="ic2 cmp" data-cmp="${p.id}" aria-pressed="${inC}">${inC?'✓ Comparing':'＋ Compare'}<span class="sr"> ${esc(p.brand+' '+p.name)}</span></button>
      <button type="button" class="ic2 heart" data-wl="${p.id}" aria-pressed="${inW}">${inW?'♥ Saved':'♡ Save'}<span class="sr"> ${esc(p.brand+' '+p.name)}</span></button>
      <a class="ic2" href="https://wa.me/?text=${encodeURIComponent(shareText(p))}" target="_blank" rel="noopener">Share on WhatsApp<span class="sr"> ${esc(p.brand+' '+p.name)}</span></a>
+     <details class="more"><summary>Other stores ▾<span class="sr"> for ${esc(p.brand+' '+p.name)}</span></summary><ul>${storesFor(p.brand+' '+(p.short&&p.short.toLowerCase().includes(p.brand.toLowerCase().split(' ')[0])?p.short.replace(new RegExp('^'+p.brand.split(' ')[0]+'\\s*','i'),''):p.short||p.name),p.sec).filter(([k])=>k!==p.where).map(([k,v])=>`<li><a href="${v}" target="_blank" rel="noopener">${k}</a></li>`).join('')}</ul></details>
    </div></td></tr>`;
 }
 function ptable(list,cap,sub,opts={}){
@@ -516,11 +554,11 @@ function viewHome(){
   const best=[...P].sort((a,b)=>score(b)-score(a)).slice(0,6);
   $('main').innerHTML=`
   <div class="hero"><canvas id="fx" aria-hidden="true"></canvas><div class="wrap hero-grid"><div>
-    <p class="eyebrow">Free comparison · ${SHOP.map(s=>esc(s.what)).join(' · ')}</p>
+    <p class="eyebrow">Free comparison · ${SHOP.length} sections · 8 stores · 4.0★ or better</p>
     <h1>Shop <span class="c">smarter</span>. Look <span class="r">sharper</span>.</h1>
-    <p class="lede">${esc(B.name)} compares well-rated footwear, clothes, jewellery, cosmetics and toys across Amazon, Flipkart, Myntra, AJIO, Nykaa and Tata CLiQ: prices, real buyer ratings, card offers and gift ideas, in one place.</p>
+    <p class="lede">${esc(B.name)} compares well-rated footwear, clothes, bags, watches, jewellery, cosmetics, books, home decor and toys across Amazon, Flipkart, Myntra, AJIO, Meesho, Nykaa, JioMart and Tata CLiQ: prices, real buyer ratings, card offers and gift ideas, in one place.</p>
     <form class="bigsearch" id="bigsearch" role="search"><label for="q" class="sr">Search everything</label><input id="q" type="search" placeholder="Try “silver earrings”, “rain sandals”, “board games”" autocomplete="off"><button class="btn pri" type="submit">Search</button></form>
-    <p class="try">Popular: <button type="button" data-q="rain sandals">rain sandals</button><button type="button" data-q="kurta">kurta sets</button><button type="button" data-q="silver earrings">silver earrings</button><button type="button" data-q="sunscreen">sunscreen</button><button type="button" data-q="board games">board games</button></p>
+    <p class="try">Popular: <button type="button" data-q="rain sandals">rain sandals</button><button type="button" data-q="kurta">kurta sets</button><button type="button" data-q="silver earrings">silver earrings</button><button type="button" data-q="sling bag">sling bags</button><button type="button" data-q="fairy lights">fairy lights</button><button type="button" data-q="books">books</button><button type="button" data-q="board games">board games</button></p>
     <div class="stats" aria-label="Site numbers"><div><b class="num" data-count="${n}">0</b><span>well-rated products</span></div><div><b class="num" data-count="${SHOP.length}">0</b><span>shopping sections</span></div><div><b class="num" data-count="${ratings}">0</b><span>buyer ratings read</span></div><div><b class="num" data-count="${D.offers.length}">0</b><span>offers tracked</span></div></div>
     <div class="install" id="install"><span>📲 Use ${esc(B.name)} like an app on your phone.</span><button class="btn acc" type="button" id="install-btn">Install</button></div>
   </div>
@@ -528,7 +566,7 @@ function viewHome(){
     <div class="label" id="olabel"><span style="opacity:.7" id="ol-k">Top rated</span><b id="ol-n">—</b><span class="num" id="ol-p"></span></div></div>
   </div></div>
   <section id="sections" aria-labelledby="sections-h"><div class="wrap"><div class="sec-head"><p class="eyebrow">Choose a section</p><h2 id="sections-h">What are you shopping for?</h2></div>
-    <div class="cards">${B.sections.map((s,i)=>{const t=topOf(s.key);return `<a class="scard ${s.key==='deal'?'span2':''}" href="#/${s.key}" style="--c:${accent(s)}"><span class="glow" aria-hidden="true"></span><span class="ic">${icon(s.key,accent(s))}</span><span class="what">${esc(s.what)}</span><h3>${nameHTML(s.name)}</h3><p>${esc(s.line)}</p><span class="foot"><span>${secCount(s.key)} ${s.key==='deal'?'offers & sales':s.key==='wrap'?'gift ideas':'products'}</span><span class="muted">${t?'Top: '+esc(t.short):'Updated twice a day'}</span></span></a>`}).join('')}</div>
+    <div class="cards">${B.sections.map((s,i)=>{const t=topOf(s.key);return `<a class="scard ${['wrap','deal'].includes(s.key)?'span2':''}" href="#/${s.key}" style="--c:${accent(s)}"><span class="glow" aria-hidden="true"></span><span class="ic">${icon(s.key,accent(s))}</span><span class="what">${esc(s.what)}</span><h3>${nameHTML(s.name)}</h3><p>${esc(s.line)}</p><span class="foot"><span>${secCount(s.key)} ${s.key==='deal'?'offers & sales':s.key==='wrap'?'gift ideas':'products'}</span><span class="muted">${t?'Top: '+esc(t.short):'Updated twice a day'}</span></span></a>`}).join('')}</div>
   </div></section>
   <section id="best" aria-labelledby="best-h"><div class="wrap"><div class="sec-head"><p class="eyebrow">Across every section</p><h2 id="best-h">Most trusted right now</h2><p class="lede">The products with the strongest ratings from the most buyers.</p></div>
     <div id="best-box">${ptable(best,'Top rated across '+esc(B.name),'Sorted by rating and number of buyers',{mixed:true})}</div>
@@ -567,7 +605,7 @@ function viewSection(key,aud){
   const mine=P.filter(p=>p.sec===key);
   const auds=['all',...['men','women','kids','unisex'].filter(a=>mine.some(p=>p.aud===a))].filter((a,i,arr)=>!(a==='unisex'&&arr.includes('all')));
   const top=[...mine].sort((a,b)=>score(b)-score(a))[0];
-  const tries={sole:['rain','office','school','running','functions'],thread:['kurta','office','polo','festival','kids'],gem:['silver','earrings','wedding','under 500','bracelet'],glam:['kajal','sunscreen','waterproof','oily skin','under 200'],wonder:['board games','age 7','cars','craft','family']}[key]||[];
+  const tries={sole:['rain','office','school','running','functions'],thread:['kurta','office','polo','festival','kids'],gem:['silver','earrings','wedding','under 500','bracelet'],glam:['kajal','sunscreen','waterproof','oily skin','under 200'],wonder:['board games','age 7','cars','craft','family'],wear:['backpack','sling bag','watch','handbag','travel'],flip:['fiction','self-help','journal','money','gift'],aesthetic:['fairy lights','candle','plants','festival','under 300']}[key]||[];
   $('main').innerHTML=`
   <div class="hero"><canvas id="fx" aria-hidden="true"></canvas><div class="wrap hero-grid"><div>
     <p class="eyebrow">${esc(s.what)} · ${esc(B.name)}</p>
@@ -610,7 +648,7 @@ function viewSection(key,aud){
     $('count').textContent=`${L.length} of ${mine.length} shown`;
     const cap=S.aud==='all'?esc(s.what):esc(s.what)+' for '+AUD[S.aud].toLowerCase();
     $('list').innerHTML=L.length?ptable(L,cap,`${L.length} product${L.length===1?'':'s'}, ${$('f-sort').selectedOptions[0].text.toLowerCase()}`,{sole:key==='sole'}):
-      `<div class="empty"><h3>Nothing here matches yet</h3><p class="msg">Try removing a filter, or search the stores directly:</p><ul class="stores">${storesFor((S.q||s.what)+(S.aud!=='all'?' '+AUD[S.aud]:'')).map(([k,v])=>`<li><a href="${v}" target="_blank" rel="noopener">${k}</a></li>`).join('')}</ul><p class="msg" style="margin-top:10px">Or <a href="#request">ask us to track it</a>.</p></div>`;
+      `<div class="empty"><h3>Nothing here matches yet</h3><p class="msg">Try removing a filter, or search the stores directly:</p><ul class="stores">${storesFor((S.q||s.what)+(S.aud!=='all'?' '+AUD[S.aud]:''),s.key).map(([k,v])=>`<li><a href="${v}" target="_blank" rel="noopener">${k}</a></li>`).join('')}</ul><p class="msg" style="margin-top:10px">Or <a href="#request">ask us to track it</a>.</p></div>`;
     fillBars($('list'));
   };
   const setAud=a=>{S.aud=a;document.querySelectorAll('[data-aud]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.aud===a));fillSel();draw();try{history.replaceState(null,'','#/'+key+(a==='all'?'':'/'+a))}catch(e){}};
@@ -711,13 +749,16 @@ function startFx(mode){
   const acc=()=>getComputedStyle(document.documentElement).getPropertyValue('--acc').trim()||'#246B76';
   const pal={confetti:['#2E8B57','#E8B23A','#3A7BD5','#C2426E','#7A4FB5'],ribbons:['#C4452F','#E8B23A','#F2826D','#7A4FB5'],home:['#246B76','#B0862A','#C2426E','#7A4FB5','#2E8B57']};
   const st={heavy:false};
-  const N=()=>Math.round(w/({rain:13,threads:140,sparkle:22,bubbles:40,confetti:26,ribbons:30,coins:60,home:30}[mode]||30)*(st.heavy?2:1));
+  const N=()=>Math.round(w/({rain:13,threads:140,sparkle:22,bubbles:40,confetti:26,ribbons:30,coins:60,home:30,dials:70,pages:70,fireflies:26}[mode]||30)*(st.heavy?2:1));
   const mk=(init)=>{const r=Math.random;switch(mode){
     case 'rain':return{x:r()*w*1.2,y:init?r()*h:-20-r()*h*.3,l:(10+r()*24)*dpr,v:(7+r()*9)*dpr,z:.4+r()*.6};
     case 'threads':return{y:r()*h,a:(8+r()*24)*dpr,f:.002+r()*.004,ph:r()*6,s:.2+r()*.5,c:r()<.5?acc():'#C99A6B',lw:(1+r()*1.5)*dpr};
     case 'sparkle':case 'home':return{x:r()*w,y:r()*h,s:(2+r()*5)*dpr,t:r()*6,v:.02+r()*.04,c:mode==='home'?pal.home[Math.floor(r()*5)]:(r()<.6?'#E6C46A':acc()),b:mode==='home'&&r()<.4};
     case 'bubbles':return{x:r()*w,y:init?r()*h:h+30,rr:(6+r()*26)*dpr,v:(.3+r()*.8)*dpr,dx:(r()-.5)*.4*dpr,o:.08+r()*.18};
     case 'confetti':case 'ribbons':return{x:r()*w,y:init?r()*h:-20,s:(4+r()*7)*dpr,v:(.8+r()*1.6)*dpr,rot:r()*6,vr:(r()-.5)*.1,sw:r()*6,c:pal[mode][Math.floor(r()*pal[mode].length)],rib:mode==='ribbons'&&r()<.35};
+    case 'dials':return{x:r()*w,y:init?r()*h:h+40,s:(8+r()*16)*dpr,v:(.25+r()*.6)*dpr,o:.12+r()*.22,a:r()*6,va:.01+r()*.03};
+    case 'pages':return{x:r()*w,y:init?r()*h:-30,s:(10+r()*14)*dpr,v:(.5+r()*.9)*dpr,rot:r()*6,vr:(r()-.5)*.03,sw:r()*6,o:.18+r()*.25};
+    case 'fireflies':return{x:r()*w,y:r()*h,s:(1.5+r()*3)*dpr,t:r()*6,v:.015+r()*.03,dx:(r()-.5)*.5*dpr,dy:(r()-.5)*.4*dpr,c:r()<.7?'#FFB72E':acc()};
     case 'coins':return{x:r()*w,y:init?r()*h:h+30,s:(10+r()*14)*dpr,v:(.4+r()*.9)*dpr,o:.1+r()*.25,rot:r()*6};
   }};
   function size(){w=c.width=c.offsetWidth*dpr;h=c.height=c.offsetHeight*dpr;ps=Array.from({length:N()},()=>mk(true))}
@@ -742,6 +783,12 @@ function startFx(mode){
         if(d.rib){x.lineWidth=2*dpr;x.beginPath();for(let k=0;k<5;k++){x.lineTo(Math.sin(k+d.sw)*d.s,k*d.s*.9)}x.stroke()}else{x.fillRect(-d.s/2,-d.s/4,d.s,d.s/2*(.4+Math.abs(Math.sin(d.sw))))}
         x.restore();d.sw+=.05;d.rot+=d.vr;
         if(d.burst){d.x+=d.burst.vx;d.y+=d.burst.vy;d.burst.vy+=.15*dpr;if(--d.life<=0)ps.splice(i,1)}else{d.y+=d.v;d.x+=Math.sin(d.sw)*.6*dpr;if(d.y>h+20)Object.assign(d,mk(false))}}
+    } else if(mode==='dials'){x.strokeStyle=A;x.lineCap='round';for(let i=ps.length-1;i>=0;i--){const d=ps[i];x.globalAlpha=d.burst?d.life/60:d.o;x.lineWidth=1.6*dpr;x.beginPath();x.arc(d.x,d.y,d.s,0,7);x.stroke();x.beginPath();x.moveTo(d.x,d.y);x.lineTo(d.x+Math.cos(d.a)*d.s*.7,d.y+Math.sin(d.a)*d.s*.7);x.moveTo(d.x,d.y);x.lineTo(d.x+Math.cos(d.a/12)*d.s*.45,d.y+Math.sin(d.a/12)*d.s*.45);x.stroke();d.a+=d.va;
+        if(d.burst){d.x+=d.burst.vx;d.y+=d.burst.vy;d.burst.vy+=.12*dpr;if(--d.life<=0)ps.splice(i,1)}else{d.y-=d.v;if(d.y<-40)Object.assign(d,mk(false))}}
+    } else if(mode==='pages'){for(let i=ps.length-1;i>=0;i--){const d=ps[i];x.globalAlpha=d.burst?d.life/60:d.o;x.save();x.translate(d.x,d.y);x.rotate(d.rot);x.scale(Math.cos(d.sw),1);x.fillStyle='#fff';x.strokeStyle=A;x.lineWidth=1.2*dpr;x.fillRect(-d.s/2,-d.s*.65,d.s,d.s*1.3);x.strokeRect(-d.s/2,-d.s*.65,d.s,d.s*1.3);x.beginPath();for(let k=1;k<4;k++){x.moveTo(-d.s*.32,-d.s*.65+k*d.s*.3);x.lineTo(d.s*.32,-d.s*.65+k*d.s*.3)}x.stroke();x.restore();d.sw+=.03;d.rot+=d.vr;
+        if(d.burst){d.x+=d.burst.vx;d.y+=d.burst.vy;d.burst.vy+=.12*dpr;if(--d.life<=0)ps.splice(i,1)}else{d.y+=d.v;d.x+=Math.sin(d.sw)*.8*dpr;if(d.y>h+30)Object.assign(d,mk(false))}}
+    } else if(mode==='fireflies'){for(let i=ps.length-1;i>=0;i--){const d=ps[i];d.t+=d.v;const k=(Math.sin(d.t)+1)/2;const g=x.createRadialGradient(d.x,d.y,0,d.x,d.y,d.s*6);g.addColorStop(0,d.c);g.addColorStop(1,'rgba(255,183,46,0)');x.globalAlpha=(d.burst?d.life/60:1)*(.2+.6*k);x.fillStyle=g;x.beginPath();x.arc(d.x,d.y,d.s*6,0,7);x.fill();x.globalAlpha=.5+.5*k;x.fillStyle=d.c;x.beginPath();x.arc(d.x,d.y,d.s*.8,0,7);x.fill();
+        if(d.burst){d.x+=d.burst.vx;d.y+=d.burst.vy;d.burst.vx*=.96;d.burst.vy*=.96;if(--d.life<=0)ps.splice(i,1)}else{d.x+=d.dx+Math.sin(d.t*.7)*.3*dpr;d.y+=d.dy+Math.cos(d.t*.5)*.3*dpr;if(d.x<-20)d.x=w+10;if(d.x>w+20)d.x=-10;if(d.y<-20)d.y=h+10;if(d.y>h+20)d.y=-10}}
     } else if(mode==='coins'){x.textAlign='center';x.textBaseline='middle';for(let i=ps.length-1;i>=0;i--){const d=ps[i];x.globalAlpha=d.o||.3;x.fillStyle=A;x.font=`700 ${d.s}px Figtree,sans-serif`;x.save();x.translate(d.x,d.y);x.scale(Math.abs(Math.cos(d.rot)),1);x.fillText(Math.random()<.002?'%':'₹',0,0);x.restore();d.rot+=.02;
         if(d.burst){d.x+=d.burst.vx;d.y+=d.burst.vy;d.burst.vy+=.15*dpr;if(--d.life<=0)ps.splice(i,1)}else{d.y-=d.v;if(d.y<-30)Object.assign(d,mk(false))}}}
   })();
