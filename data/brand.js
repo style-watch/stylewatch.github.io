@@ -2,7 +2,7 @@
    To rename the app or a section, change the words in quotes below. Nothing else needs to change. */
 window.BRAND = {
   name: "StyleWatch",
-  tagline: "Your every style, ticked here",
+  tagline: "Your every style is ticked here",
   /* Paste a free Formspree or Web3Forms link here to receive requests by email. Leave empty to use WhatsApp. */
   formEndpoint: "",
   sections: [
