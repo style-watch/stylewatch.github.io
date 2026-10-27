@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>StyleWatch</title>
-<meta name="description" content="Compare well-rated footwear, clothes, jewellery, cosmetics and toys across Indian stores: prices, buyer ratings, offers and gift ideas.">
+<meta name="description" content="Shop by category and brand: compare top-rated footwear, clothes, bags, watches, jewellery, beauty, books, decor and toys across Indian stores, build a full look within budget, and find gifts.">
 <meta name="theme-color" content="#10292B">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -58,13 +58,14 @@ header.top{position:sticky;top:0;z-index:30;background:color-mix(in srgb,var(--m
 .nav nav a[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--acc)}
 .wl-link .n{font-family:var(--mono);font-size:.72rem;background:var(--heart);color:#fff;border-radius:99px;padding:0 6px;margin-left:4px}
 @media (max-width:1500px){.nav nav a.sec{display:none}}
-@media (max-width:1000px){.nav nav a.home{display:none}}
+@media (max-width:1000px){.nav nav a.home,.nav nav a.xtra{display:none}}
+@media (max-width:480px){.tagline{font-size:.48rem;letter-spacing:.12em}.nav nav{flex:none}.nav nav a.wl-link{padding:7px 4px}}
 main h1:focus,main h2:focus{outline:none}
 .secbar{display:none;overflow-x:auto;gap:6px;padding:8px 20px;border-top:1px solid var(--line);scrollbar-width:none}
 .secbar a{flex:none;text-decoration:none;font-weight:700;font-size:.84rem;padding:6px 12px;border-radius:99px;border:1px solid var(--line);background:var(--paper)}
 .secbar a[aria-current="page"]{background:var(--ink);color:var(--mist);border-color:var(--ink)}
 @media (max-width:1500px){.secbar{display:flex}}
-@media (min-width:1001px){.secbar{justify-content:center}}
+@media (min-width:1001px){.secbar{justify-content:safe center}}
 
 /* ticker */
 .ticker{background:var(--ink);color:var(--mist);overflow:hidden;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em}
@@ -77,7 +78,8 @@ main h1:focus,main h2:focus{outline:none}
 .hero{position:relative;overflow:hidden;padding:46px 0 44px;border-bottom:1px solid var(--line);background:radial-gradient(120% 90% at 85% 10%,color-mix(in srgb,var(--acc) 16%,transparent),transparent 60%),radial-gradient(90% 70% at 0% 100%,color-mix(in srgb,var(--cognac) 10%,transparent),transparent 60%)}
 .hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .hero-grid{position:relative;display:grid;grid-template-columns:1.2fr .9fr;gap:36px;align-items:center}
-@media (max-width:920px){.hero-grid{grid-template-columns:1fr}}
+@media (max-width:920px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.hero-grid>*{min-width:0}
 .hero h1{font-size:clamp(2.7rem,6.6vw,5.2rem);font-weight:900;line-height:.9;max-width:15ch}
 .hero h1 .c{background:linear-gradient(90deg,var(--cognac),#D88A4E,var(--cognac));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sheen 6s ease-in-out infinite}
 .hero h1 .r{color:var(--acc)}
@@ -159,7 +161,7 @@ section{padding:52px 0;border-bottom:1px solid var(--line)}
 @media (max-width:980px){.filters{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media (max-width:560px){.filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .fld{display:flex;flex-direction:column;gap:5px}
-.fld label{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fld label,.fld .lab{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
 .fld input,.fld select,.fld textarea{font:inherit;font-size:.93rem;padding:9px 11px;border-radius:10px;border:1px solid var(--line);background:var(--mist);color:var(--ink);width:100%}
 .fld.wide2{grid-column:span 2}
 .toggles{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
@@ -279,6 +281,95 @@ details.more summary::-webkit-details-marker{display:none}
 details.more ul{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:4px;max-width:220px}
 details.more a{display:inline-block;font-size:.76rem;font-weight:700;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:3px 7px;background:var(--soft);color:var(--ink)}
 details.more a:hover{border-color:var(--acc);color:var(--acc)}
+/* shop by category */
+.audhead{display:flex;align-items:center;gap:10px;margin:22px 0 10px;font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.audhead:first-child{margin-top:0}
+.audhead::after{content:"";flex:1;height:1px;background:var(--line)}
+.cattiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(168px,1fr));gap:12px}
+.ctile{font:inherit;text-align:left;cursor:pointer;position:relative;display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:12px 12px 12px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s,border-color .2s;color:var(--ink);text-decoration:none;min-width:0}
+.ctile:hover{transform:translateY(-3px);border-color:var(--acc);box-shadow:0 2px 4px rgba(16,41,43,.06),0 14px 30px rgba(16,41,43,.12)}
+.ctile[aria-pressed="true"]{border-color:var(--acc);box-shadow:0 0 0 3px color-mix(in srgb,var(--acc) 22%,transparent),var(--shadow)}
+.ctile[aria-pressed="true"]::after{content:"✓";position:absolute;top:8px;right:10px;width:22px;height:22px;border-radius:50%;background:var(--acc);color:#fff;display:grid;place-items:center;font-size:.75rem;font-weight:800}
+.ctile .cart{height:74px;border-radius:12px;background:linear-gradient(160deg,var(--acc-soft),color-mix(in srgb,var(--cognac-soft) 70%,#fff));display:grid;place-items:center;overflow:hidden}
+.ctile .cart svg{width:88%;height:70px;transition:transform .35s}
+.ctile:hover .cart svg{transform:scale(1.08) rotate(-2deg)}
+.ctile b{font-size:.98rem;line-height:1.2}
+.ctile .meta{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--acc)}
+.ctile .meta.none{color:var(--muted)}
+.ctile .bl{font-size:.78rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bguide{scroll-margin-top:130px;margin-top:18px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,color-mix(in srgb,var(--acc) 6%,#fff),#fff 140px);padding:20px;box-shadow:var(--shadow);animation:rise .45s ease}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}}
+.bguide-head{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between}
+.bguide h3{font-family:var(--display);font-size:1.7rem;text-transform:uppercase;font-weight:900;margin:0;line-height:1}
+.tierchips{display:flex;gap:6px;flex-wrap:wrap}
+.tierchips .chip{font-size:.8rem;padding:5px 11px}
+.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px;margin-top:14px}
+.bcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.bcard .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.bcard .nm{font-weight:800;font-size:1.02rem}
+.tier{font-family:var(--mono);font-size:.78rem;font-weight:600;letter-spacing:.04em;white-space:nowrap}
+.tier i{font-style:normal;color:var(--line)}
+.tier.t1{color:var(--good)}.tier.t2{color:var(--warn)}.tier.t3{color:var(--cognac)}
+.bcard .kn{font-size:.86rem;color:var(--muted);margin:0}
+.bcard .links{display:flex;flex-wrap:wrap;gap:4px;margin-top:auto;padding-top:4px}
+.bcard .links a,.bcard .links button{font:inherit;font-size:.72rem;font-weight:700;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:3px 7px;background:var(--soft);color:var(--ink);cursor:pointer}
+.bcard .links a:hover{border-color:var(--acc);color:var(--acc)}
+.bcard .links .pk{background:var(--acc);border-color:var(--acc);color:#fff}
+.allstores{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:14px;font-size:.88rem;color:var(--muted)}
+.allstores a{font-weight:700;text-decoration:none;border:1px solid var(--line);border-radius:10px;padding:5px 10px;background:var(--paper);color:var(--ink);font-size:.82rem}
+.allstores a:hover{border-color:var(--cognac);color:var(--cognac)}
+.picked{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.picked .chip{font-size:.82rem;padding:5px 12px}
+/* home category strip */
+.catstrip{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:12px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x mandatory;scrollbar-width:thin}
+.catstrip .ctile{scroll-snap-align:start}
+.promos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+@media (max-width:760px){.promos{grid-template-columns:1fr}}
+.promo{position:relative;overflow:hidden;display:flex;gap:16px;align-items:center;text-decoration:none;color:var(--mist);background:var(--ink);border-radius:20px;padding:20px 22px;box-shadow:0 18px 40px rgba(16,41,43,.18);transition:transform .25s}
+.promo:hover{transform:translateY(-3px)}
+.promo .pi{flex:none;width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:2rem;background:color-mix(in srgb,var(--mist) 12%,transparent)}
+.promo h3{font-family:var(--display);font-size:1.6rem;text-transform:uppercase;margin:0;font-weight:900;line-height:1}
+.promo p{margin:4px 0 0;font-size:.9rem;color:color-mix(in srgb,var(--mist) 75%,transparent)}
+.promo .new{position:absolute;top:12px;right:14px;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;background:#E7A36C;color:var(--ink);padding:2px 8px;border-radius:99px;font-weight:600}
+.promo.alt{background:linear-gradient(135deg,var(--cognac),#7A3A12)}
+/* brand atlas */
+.az{display:flex;flex-wrap:wrap;gap:4px;margin-top:14px}
+.az a,.az span{font-family:var(--mono);font-size:.78rem;font-weight:600;width:30px;height:30px;display:grid;place-items:center;border-radius:8px;border:1px solid var(--line);text-decoration:none;background:var(--paper)}
+.az span{color:var(--line)}
+.az a:hover{border-color:var(--acc);color:var(--acc)}
+.letter{font-family:var(--display);font-size:2.2rem;font-weight:900;color:var(--acc);margin:26px 0 8px;line-height:1;scroll-margin-top:90px}
+.secdots{display:flex;flex-wrap:wrap;gap:4px}
+.secdots .secpill{font-size:.6rem}
+/* look builder */
+.lookctl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px;box-shadow:var(--shadow);margin-top:20px;max-width:640px}
+@media (max-width:640px){.lookctl{grid-template-columns:1fr}}
+.lookctl .chips{margin-top:4px}
+.lookctl input[type=range]{width:100%;accent-color:var(--cognac)}
+.budgetv{font-family:var(--display);font-size:1.8rem;font-weight:900;line-height:1}
+.lookboard{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);gap:18px;align-items:start}
+@media (max-width:900px){.lookboard{grid-template-columns:1fr}}
+.lookitems{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+.litem{background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;animation:rise .5s ease both}
+.litem .la{height:96px;background:linear-gradient(160deg,var(--acc-soft),var(--cognac-soft));display:grid;place-items:center;position:relative}
+.litem .la svg{width:80%;height:84px}
+.litem .slot{position:absolute;left:10px;top:8px;font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;background:var(--paper);border-radius:99px;padding:2px 8px;color:var(--acc);font-weight:600}
+.litem .lb{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px;flex:1}
+.litem small{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--cognac);text-transform:uppercase}
+.litem .nm{font-weight:700;font-size:.92rem;line-height:1.3}
+.litem .pr{font-family:var(--mono);font-size:.9rem;margin-top:auto}
+.litem .acts{flex-direction:row;flex-wrap:wrap;margin-top:6px}
+.lsum{position:sticky;top:90px;background:var(--ink);color:var(--mist);border-radius:20px;padding:20px;box-shadow:0 18px 40px rgba(16,41,43,.22)}
+.lsum h3{font-family:var(--display);font-size:1.6rem;text-transform:uppercase;font-weight:900;margin:0;color:var(--mist)}
+.meter{height:12px;border-radius:99px;background:color-mix(in srgb,var(--mist) 16%,transparent);overflow:hidden;margin:10px 0 6px}
+.meter i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,#E7A36C,var(--cognac));transition:width 1s ease}
+.lsum .big{font-family:var(--display);font-size:2.6rem;font-weight:900;line-height:1}
+.lsum .row2{display:flex;justify-content:space-between;font-size:.86rem;color:color-mix(in srgb,var(--mist) 75%,transparent)}
+.lsum .btn.ghost{color:var(--mist);border-color:color-mix(in srgb,var(--mist) 35%,transparent)}
+.lsum .hero-actions{margin-top:14px}
+.brandring svg{width:100%;height:100%;display:block}
+.spinslow{transform-origin:200px 200px;animation:spin 60s linear infinite}
+.spinslow.rev{animation-direction:reverse;animation-duration:80s}
+@media (prefers-reduced-motion:reduce){.bguide,.litem,.spinslow{animation:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}.ticker .track,.sweep,.float,.hero h1 .c,.orbit .ring,.orbit .moon span{animation:none}.cbar{transition:none}}
 </style>
 </head>
@@ -323,6 +414,7 @@ details.more a:hover{border-color:var(--acc);color:var(--acc)}
 
 <script src="data/brand.js"></script>
 <script src="data/catalog.js"></script>
+<script src="data/taxonomy.js"></script>
 <script>
 /* ================= setup ================= */
 const B=window.BRAND, D=window.SW;
@@ -350,6 +442,17 @@ const CAT={sandals:'Sandals',floaters:'Floaters & rain sandals',flats:'Flats',he
 const USE={rain:'Rain & monsoon',office:'Office',functions:'Functions',festival:'Festivals',wedding:'Weddings',party:'Parties',daily:'Daily wear',home:'Home',walking:'Walking',running:'Running',gym:'Gym',school:'School',sports:'PT & sports',travel:'Travel',
  college:'College',reading:'Reading','self-help':'Self-help',money:'Money',fiction:'Stories',journaling:'Journaling & notes',bedroom:'Bedroom',balcony:'Balcony',table:'Table & shelf',gifting:'Gifting',
  family:'Family game night',learning:'Learning',crafts:'Crafts',play:'Play',age0:'0–2 years',age3:'3–5 years',age5:'5–7 years',age7:'7–10 years',age10:'10+ years',age15:'Teens & adults'};
+USE.toddler='Toddlers';
+const TAX=window.TAX||{};
+/* category label for a product (section and audience aware), falling back to the old list */
+const catInfo=(sec,aud,key)=>{const L=TAX[sec]||[];return L.find(c=>c.key===key&&c.aud===aud)||L.find(c=>c.key===key&&c.aud==='all')||L.find(c=>c.key===key)||null};
+const catName=(sec,aud,key)=>{const c=catInfo(sec,aud,key);return c?c.label:(CAT[key]||key)};
+const TIER=['','₹','₹₹','₹₹₹'], TIERW=['','Budget','Mid-range','Premium'];
+/* brand atlas: every brand across the taxonomy, merged */
+const ATLAS=(()=>{const m=new Map();for(const [sec,L] of Object.entries(TAX))for(const c of L)for(const [n,t,k] of c.brands){const id=n.toLowerCase();if(!m.has(id))m.set(id,{name:n,tiers:[],known:[],secs:new Set(),cats:[]});const b=m.get(id);b.tiers.push(t);if(!b.known.includes(k))b.known.push(k);b.secs.add(sec);b.cats.push({sec,aud:c.aud,key:c.key,label:c.label})}
+  for(const p of D.products){const b=m.get(p.brand.toLowerCase());if(b){b.secs.add(p.sec)}}
+  return [...m.values()].map(b=>({...b,tier:Math.round(b.tiers.reduce((a,x)=>a+x,0)/b.tiers.length),secs:[...b.secs]})).sort((a,b)=>a.name.localeCompare(b.name))})();
+const brandPicks=n=>P.filter(p=>p.brand.toLowerCase()===n.toLowerCase());
 const FOR={her:'For her',him:'For him',kids:'For kids',family:'For the family'};
 const OCC={birthday:'Birthday',anniversary:'Anniversary',festival:'Diwali & festivals',wedding:'Wedding',party:'Party'};
 document.title=B.name+' · '+B.tagline;
@@ -414,7 +517,22 @@ const ART={
  cards:`<rect x="60" y="20" width="60" height="84" rx="8" fill="var(--paper)" stroke="var(--acc)" stroke-width="4" transform="rotate(-12 90 62)"/><rect x="100" y="20" width="60" height="84" rx="8" fill="var(--acc)" transform="rotate(10 130 62)"/><text x="130" y="72" font-size="28" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="800" transform="rotate(10 130 62)">?</text>`,
  blocks:`<rect x="40" y="62" width="44" height="44" rx="4" fill="var(--acc)"/><rect x="88" y="62" width="44" height="44" rx="4" fill="#E8B23A"/><rect x="136" y="62" width="44" height="44" rx="4" fill="#C2426E"/><rect x="64" y="16" width="44" height="44" rx="4" fill="#3A7BD5"/><rect x="112" y="16" width="44" height="44" rx="4" fill="#7A4FB5"/>`,
  car:`<path d="M30 80c0-12 8-18 20-20l20-22h60l26 22c14 2 24 8 24 20v8H30z" fill="#D7263D"/><circle cx="66" cy="90" r="14" fill="#111"/><circle cx="154" cy="90" r="14" fill="#111"/><path d="M78 44h46l18 16H66z" fill="#A8DADC"/>`,
- craft:`<path d="M40 100l50-80 50 80z" fill="#E8B23A"/><circle cx="150" cy="44" r="26" fill="#C2426E"/><rect x="120" y="70" width="60" height="36" rx="4" fill="var(--acc)"/>`};
+ craft:`<path d="M40 100l50-80 50 80z" fill="#E8B23A"/><circle cx="150" cy="44" r="26" fill="#C2426E"/><rect x="120" y="70" width="60" height="36" rx="4" fill="var(--acc)"/>`,
+ saree:`<path d="M70 10h50l10 40-8 64H58l6-64z" fill="var(--acc)"/><path d="M120 10c30 8 46 30 48 58l-24 46h-22l8-64z" fill="var(--cognac)" opacity=".85"/><path d="M60 100h66" stroke="#E8C27A" stroke-width="6"/><path d="M122 14c26 10 38 30 40 52" fill="none" stroke="#E8C27A" stroke-width="4"/><g fill="#E8C27A"><circle cx="82" cy="60" r="3"/><circle cx="98" cy="74" r="3"/><circle cx="84" cy="86" r="3"/></g>`,
+ briefcase:`<path d="M88 30v-8a8 8 0 0 1 8-8h28a8 8 0 0 1 8 8v8" fill="none" stroke="var(--ink)" stroke-width="5"/><rect x="44" y="30" width="132" height="80" rx="10" fill="#5B3A22"/><path d="M44 62h132" stroke="var(--cognac)" stroke-width="4"/><rect x="100" y="54" width="20" height="16" rx="3" fill="#E8C27A"/>`,
+ trolley:`<path d="M96 22V6h28v16" fill="none" stroke="var(--ink)" stroke-width="5"/><rect x="72" y="22" width="76" height="86" rx="12" fill="var(--acc)"/><g stroke="var(--paper)" stroke-width="3" opacity=".55"><path d="M90 30v70M110 30v70M130 30v70"/></g><circle cx="84" cy="112" r="6" fill="var(--ink)"/><circle cx="136" cy="112" r="6" fill="var(--ink)"/>`,
+ wallet:`<rect x="50" y="28" width="120" height="78" rx="10" fill="#5B3A22"/><path d="M50 52h120" stroke="var(--cognac)" stroke-width="3"/><rect x="128" y="56" width="42" height="26" rx="6" fill="var(--cognac)"/><circle cx="142" cy="69" r="4" fill="#E8C27A"/><rect x="62" y="16" width="70" height="20" rx="3" fill="#7FB38A" transform="rotate(-6 97 26)"/>`,
+ shades:`<path d="M24 46h172" stroke="var(--ink)" stroke-width="5" stroke-linecap="round"/><path d="M34 46h62c0 26-10 40-32 40S34 72 34 46zM124 46h62c0 26-10 40-32 40s-30-14-30-40z" fill="var(--ink)"/><path d="M44 54c6-4 14-4 20 0M134 54c6-4 14-4 20 0" stroke="#fff" stroke-width="3" opacity=".5" fill="none"/><path d="M96 50c6-6 22-6 28 0" fill="none" stroke="var(--ink)" stroke-width="5"/>`,
+ smartwatch:`<rect x="94" y="2" width="32" height="116" rx="10" fill="var(--ink)" opacity=".8"/><rect x="78" y="26" width="64" height="70" rx="16" fill="var(--ink)"/><rect x="84" y="32" width="52" height="58" rx="11" fill="var(--acc)"/><path d="M92 64h8l5-12 7 22 5-10h12" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>`,
+ anklet:`<ellipse cx="110" cy="56" rx="74" ry="30" fill="none" stroke="#C9CDD2" stroke-width="5"/>${Array.from({length:9},(_,i)=>{const a=Math.PI*(0.15+i*0.0875);return `<circle cx="${(110-74*Math.cos(a)).toFixed(1)}" cy="${(56+30*Math.sin(a)).toFixed(1)}" r="6" fill="#E8C27A"/><path d="M${(110-74*Math.cos(a)).toFixed(1)} ${(62+30*Math.sin(a)).toFixed(1)}v10" stroke="#C9CDD2" stroke-width="2"/><circle cx="${(110-74*Math.cos(a)).toFixed(1)}" cy="${(76+30*Math.sin(a)).toFixed(1)}" r="4" fill="#C9CDD2"/>`}).join('')}`,
+ bottle:`<rect x="92" y="10" width="36" height="18" rx="4" fill="var(--ink)"/><path d="M84 28h52v80a8 8 0 0 1-8 8H92a8 8 0 0 1-8-8z" fill="var(--acc)"/><rect x="92" y="52" width="36" height="38" rx="4" fill="var(--paper)" opacity=".9"/><path d="M98 64h24M98 74h16" stroke="var(--acc)" stroke-width="3"/>`,
+ perfume:`<rect x="100" y="8" width="20" height="16" rx="3" fill="#E8C27A"/><rect x="104" y="24" width="12" height="10" fill="var(--ink)"/><rect x="72" y="34" width="76" height="80" rx="16" fill="var(--acc)" opacity=".85"/><rect x="82" y="44" width="56" height="60" rx="10" fill="var(--paper)" opacity=".35"/><path d="M128 14l12-6M128 18h14M128 22l12 6" stroke="var(--line)" stroke-width="2"/>`,
+ trimmer:`<rect x="94" y="30" width="32" height="86" rx="14" fill="var(--ink)"/><rect x="90" y="8" width="40" height="26" rx="4" fill="#C9CDD2"/><path d="M92 8v-4M98 8v-4M104 8v-4M110 8v-4M116 8v-4M122 8v-4M128 8v-4" stroke="#C9CDD2" stroke-width="2"/><circle cx="110" cy="66" r="7" fill="var(--acc)"/>`,
+ frame:`<rect x="46" y="12" width="128" height="96" rx="4" fill="#C99A6B"/><rect x="56" y="22" width="108" height="76" fill="var(--paper)"/><path d="M56 98l34-40 22 26 16-16 36 30z" fill="var(--acc)"/><circle cx="140" cy="40" r="9" fill="#E8C27A"/>`,
+ bedsheet:`<rect x="30" y="40" width="160" height="62" rx="8" fill="var(--acc)"/><path d="M30 60h160" stroke="var(--paper)" stroke-width="3" opacity=".6"/><rect x="40" y="22" width="60" height="28" rx="10" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/><rect x="120" y="22" width="60" height="28" rx="10" fill="var(--paper)" stroke="var(--line)" stroke-width="2"/><g fill="var(--paper)" opacity=".5"><circle cx="70" cy="80" r="5"/><circle cx="110" cy="84" r="5"/><circle cx="150" cy="80" r="5"/></g>`,
+ lamp:`<circle cx="110" cy="44" r="40" fill="#FFD27A" opacity=".25"/><path d="M80 18h60l14 40H66z" fill="var(--acc)"/><rect x="106" y="58" width="8" height="44" fill="var(--ink)"/><rect x="82" y="102" width="56" height="10" rx="5" fill="var(--ink)"/>`,
+ puzzle:`<path d="M40 30h50v14a10 10 0 1 0 20 0V30h50v50h-14a10 10 0 1 0 0 20h14v12H40V80h14a10 10 0 1 0 0-20H40z" fill="var(--acc)"/><path d="M110 30v82M40 70h120" stroke="var(--paper)" stroke-width="4"/>`,
+ teddy:`<circle cx="76" cy="28" r="16" fill="#9A6A3E"/><circle cx="144" cy="28" r="16" fill="#9A6A3E"/><circle cx="110" cy="50" r="36" fill="#C99A6B"/><ellipse cx="110" cy="62" rx="14" ry="10" fill="#EBD3B5"/><circle cx="96" cy="44" r="4" fill="var(--ink)"/><circle cx="124" cy="44" r="4" fill="var(--ink)"/><circle cx="110" cy="58" r="4" fill="var(--ink)"/><ellipse cx="110" cy="104" rx="38" ry="22" fill="#C99A6B"/><path d="M96 84l14 8 14-8" fill="var(--heart)"/>`};
 const art=s=>`<svg viewBox="0 0 220 120" aria-hidden="true">${ART[s]||ART.blocks}</svg>`;
 
 /* ================= state ================= */
@@ -443,10 +561,10 @@ function countUp(el){const end=+el.dataset.count||0;if(RM){el.textContent=end.to
 function every(ms,fn){const t=setInterval(fn,ms);timers.push(t)}
 
 /* ================= search ================= */
-const SYN=[[/\b(chappal|chappals|slipper|slippers|floater|floaters|flip ?flops?)\b/,'cat:floaters|cat:sandals'],[/\b(sandal|sandals)\b/,'cat:sandals|cat:floaters'],[/\b(rain|rainy|monsoon|waterproof|wet)\b/,'rain'],[/\b(office|work)\b/,'use:office'],[/\b(formal)\b/,'cat:formal|use:office|cat:shirts'],[/\b(wedding|weddings|bridal)\b/,'use:wedding|use:functions'],[/\b(function|functions|party|event|events)\b/,'use:functions|use:party|use:wedding'],[/\b(festival|festive|diwali|onam)\b/,'use:festival|use:functions'],[/\b(run|running|jog|jogging)\b/,'use:running'],[/\b(walk|walking)\b/,'use:walking'],[/\b(school|uniform)\b/,'cat:school|use:school'],[/\b(pt|sports?|gym|trainer)\b/,'cat:sports'],[/\b(heel|heels|wedge|wedges)\b/,'cat:heels'],[/\b(flat|flats|ballerina)\b/,'cat:flats'],[/\b(shoe|shoes)\b/,'sec:sole'],[/\b(footwear)\b/,'sec:sole'],[/\b(cloth|clothes|clothing|dress|dresses)\b/,'sec:thread'],[/\b(bag|bags)\b/,'sec:wear'],[/\b(backpack|backpacks|rucksack|college bag|laptop bag)\b/,'cat:backpacks|cat:travel'],[/\b(sling|slings|side bag|crossbody|purse)\b/,'cat:slings|cat:handbags'],[/\b(handbag|handbags|tote|totes|satchel)\b/,'cat:handbags'],[/\b(luggage|trolley|suitcase|overnighter)\b/,'cat:travel'],[/\b(watch|watches|wristwatch)\b/,'cat:watches'],[/\b(book|books|novel|novels|read|reading)\b/,'sec:flip'],[/\b(fiction|story|stories)\b/,'cat:fiction'],[/\b(non-?fiction|self ?help|self-help)\b/,'cat:nonfiction'],[/\b(journal|journals|diary|notebook|notebooks|notes)\b/,'cat:journals'],[/\b(decor|decoration|aesthetic|home decor|room)\b/,'sec:aesthetic'],[/\b(fairy|lights?|string lights?|led)\b/,'cat:lights'],[/\b(candle|candles|tealight|diya)\b/,'cat:candles'],[/\b(plant|plants|greenery)\b/,'cat:plants'],[/\b(lipstick|lip)\b/,'cat:lips'],[/\b(tshirt|t-shirt|tee|tees|polo)\b/,'cat:tops'],[/\b(kurta|kurti|salwar|anarkali|ethnic)\b/,'cat:ethnic'],[/\b(jewellery|jewelry|jewel)\b/,'sec:gem'],[/\b(earring|earrings|studs?)\b/,'cat:earrings'],[/\b(necklace|chain)\b/,'cat:necklaces|cat:sets'],[/\b(silver)\b/,'brand:giva'],[/\b(makeup|make-up|cosmetic|cosmetics|beauty)\b/,'sec:glam'],[/\b(kajal|eyeliner|kohl)\b/,'cat:eyes'],[/\b(sunscreen|spf|sunblock)\b/,'cat:skincare'],[/\b(toy|toys|game|games)\b/,'sec:wonder'],[/\b(board ?games?)\b/,'cat:boardgames'],[/\b(gift|gifts|present)\b/,'gift'],[/\b(men|mens|men's|gents|male|him)\b/,'aud:men'],[/\b(women|womens|women's|ladies|her)\b/,'aud:women'],[/\b(kid|kids|child|children|boys?|girls?)\b/,'aud:kids']];
+const SYN=[[/\b(smart ?watch|smartwatches|fitness band)\b/,'cat:smartwatch'],[/\b(school ?bags?)\b/,'cat:school|cat:backpacks'],[/\b(college ?bags?|laptop ?bags?|backpacks?|rucksacks?)\b/,'cat:backpacks|cat:trek|cat:school'],[/\b(trek|trekking|hiking)\b/,'cat:trek'],[/\b(trolley|suitcase|luggage|cabin bag|overnighter)\b/,'cat:travel'],[/\b(executive|office bag|messenger|briefcase)\b/,'cat:office'],[/\b(wallets?|card holder|purse for men)\b/,'cat:wallets'],[/\b(sunglass(es)?|shades|goggles)\b/,'cat:sunglasses'],[/\b(slides?|slippers?|chappals?|flip ?flops?)\b/,'cat:slippers|cat:floaters|cat:sandals'],[/\b(floaters?)\b/,'cat:floaters'],[/\b(sandal|sandals)\b/,'cat:sandals|cat:floaters'],[/\b(sneakers?|casual shoes?)\b/,'cat:sneakers|cat:casual'],[/\b(rain|rainy|monsoon|waterproof|wet)\b/,'rain'],[/\b(office|work)\b/,'use:office'],[/\b(formal)\b/,'cat:formal|use:office|cat:shirts|cat:trousers'],[/\b(wedding|weddings|bridal)\b/,'use:wedding|use:functions'],[/\b(function|functions|party|event|events)\b/,'use:functions|use:party|use:wedding'],[/\b(festival|festive|diwali|onam)\b/,'use:festival|use:functions'],[/\b(run|running|jog|jogging)\b/,'use:running'],[/\b(walk|walking)\b/,'use:walking'],[/\b(school|uniform)\b/,'cat:school|use:school'],[/\b(pt|sports?|trainer)\b/,'cat:sports'],[/\b(gym|workout|tights)\b/,'use:gym|cat:active'],[/\b(heel|heels|wedge|wedges)\b/,'cat:heels'],[/\b(flat|flats|ballerina)\b/,'cat:flats'],[/\b(shoe|shoes)\b/,'sec:sole'],[/\b(footwear)\b/,'sec:sole'],[/\b(sarees?|saris?)\b/,'cat:sarees'],[/\b(jeans|denims?)\b/,'cat:jeans'],[/\b(trousers?|chinos?|formal pants?)\b/,'cat:trousers'],[/\b(track ?pants?|joggers?|lowers?)\b/,'cat:track'],[/\b(leggings?|churidars?|palazzos?)\b/,'cat:leggings'],[/\b(shorts)\b/,'cat:shorts'],[/\b(dress|dresses|frocks?|maxi|gown)\b/,'cat:dresses|cat:gdresses|cat:western'],[/\b(cloth|clothes|clothing)\b/,'sec:thread'],[/\b(handbag|handbags|tote|totes|satchel)\b/,'cat:handbags'],[/\b(sling|slings|side bag|crossbody|purse)\b/,'cat:slings|cat:handbags'],[/\b(bag|bags)\b/,'sec:wear'],[/\b(watch|watches|wristwatch)\b/,'cat:watches|cat:smartwatch'],[/\b(book|books|novel|novels|read|reading)\b/,'sec:flip'],[/\b(fiction|story|stories)\b/,'cat:fiction'],[/\b(non-?fiction|self ?help|self-help)\b/,'cat:nonfiction'],[/\b(journal|journals|diary|notebook|notebooks|notes)\b/,'cat:journals'],[/\b(wall ?art|paintings?|frames?|photo frame)\b/,'cat:walldecor'],[/\b(bedsheets?|bed ?sheets?|bedding|cushions?)\b/,'cat:bedding'],[/\b(lamps?|night ?lights?|study lamp)\b/,'cat:lamps'],[/\b(decor|decoration|aesthetic|home decor|room)\b/,'sec:aesthetic'],[/\b(fairy|string lights?|led)\b/,'cat:lights'],[/\b(candle|candles|tealight|diya)\b/,'cat:candles'],[/\b(plant|plants|greenery)\b/,'cat:plants'],[/\b(lipstick|lip)\b/,'cat:lips'],[/\b(polos?)\b/,'cat:polos|cat:tops'],[/\b(tshirts?|t-shirts?|tees?)\b/,'cat:tees|cat:tops|cat:polos'],[/\b(shirts?)\b/,'cat:shirts'],[/\b(kurta|kurtas|kurti|kurtis|salwar|anarkali|ethnic|kurta pyjama)\b/,'cat:ethnic|cat:kurtas|cat:kethnic'],[/\b(sweatshirts?|hoodies?|jackets?)\b/,'cat:winter'],[/\b(jewellery|jewelry|jewel)\b/,'sec:gem'],[/\b(anklets?|payal)\b/,'cat:anklets'],[/\b(bangles?|bracelets?|kada)\b/,'cat:bracelets|cat:menjewel'],[/\b(earring|earrings|studs?)\b/,'cat:earrings'],[/\b(necklace|chains?|pendant)\b/,'cat:necklaces|cat:sets|cat:menjewel'],[/\b(silver)\b/,'brand:giva'],[/\b(makeup|make-up|cosmetic|cosmetics|beauty)\b/,'sec:glam'],[/\b(kajal|eyeliner|kohl)\b/,'cat:eyes'],[/\b(sunscreen|spf|sunblock)\b/,'cat:skincare'],[/\b(face ?wash|cleanser)\b/,'cat:cleanse'],[/\b(shampoo|hair ?oil|hair ?care|dandruff|hairfall)\b/,'cat:hair'],[/\b(perfumes?|deo|deodorant|fragrance|scent)\b/,'cat:fragrance'],[/\b(trimmer|shaver|beard)\b/,'cat:grooming'],[/\b(lego|stem|building blocks?|magnetic tiles?)\b/,'cat:stem'],[/\b(puzzles?|jigsaw|map)\b/,'cat:puzzles'],[/\b(teddy|soft ?toys?|plush)\b/,'cat:soft'],[/\b(toy|toys|game|games)\b/,'sec:wonder'],[/\b(board ?games?)\b/,'cat:boardgames'],[/\b(gift|gifts|present)\b/,'gift'],[/\b(men|mens|men's|gents|male|him)\b/,'aud:men'],[/\b(women|womens|women's|ladies|her)\b/,'aud:women'],[/\b(kid|kids|child|children|boys?|girls?)\b/,'aud:kids']];
 function matchQ(p,q){
   q=(q||'').toLowerCase().trim(); if(!q) return true;
-  const hay=(p.brand+' '+p.name+' '+(CAT[p.cat]||'')+' '+p.use.map(u=>USE[u]||u).join(' ')+' '+(p.colours||[]).join(' ')+' '+p.aud+' '+SEC[p.sec].what).toLowerCase();
+  const hay=(p.brand+' '+p.name+' '+catName(p.sec,p.aud,p.cat)+' '+p.use.map(u=>USE[u]||u).join(' ')+' '+(p.colours||[]).join(' ')+' '+p.aud+' '+SEC[p.sec].what).toLowerCase();
   let rest=q;
   for(const [re,rule] of SYN){ if(re.test(rest)){ rest=rest.replace(re,' ');
     const ok=rule.split('|').some(r=>r==='rain'?p.rain>=4||p.use.includes('rain'):r==='gift'?p.gift&&p.gift.length:r.startsWith('cat:')?p.cat===r.slice(4):r.startsWith('use:')?p.use.includes(r.slice(4)):r.startsWith('sec:')?p.sec===r.slice(4):r.startsWith('brand:')?p.brand.toLowerCase()===r.slice(6):r.startsWith('aud:')?(p.aud===r.slice(4)||p.aud==='unisex'||(r==='aud:women'&&/girls?/.test(q)&&p.aud==='kids')):false);
@@ -459,12 +577,12 @@ function matchQ(p,q){
 /* ================= nav ================= */
 function nav(){
   const r=CUR;
-  $('mainnav').innerHTML=`<a class="home" href="#/" ${r==='home'?'aria-current="page"':''}>Home</a>`+B.sections.map(s=>`<a class="sec" href="#/${s.key}" ${r===s.key?'aria-current="page"':''}>${esc(s.name)}</a>`).join('')+`<a href="#/saved" class="wl-link" ${r==='saved'?'aria-current="page"':''}>♥ Saved<span class="n" id="wl-n">${WL.size}</span></a>`;
-  $('secbar').innerHTML=`<a href="#/" ${r==='home'?'aria-current="page"':''}>Home</a>`+B.sections.map(s=>`<a href="#/${s.key}" ${r===s.key?'aria-current="page"':''}>${esc(s.name)}</a>`).join('');
+  $('mainnav').innerHTML=`<a class="home" href="#/" ${r==='home'?'aria-current="page"':''}>Home</a>`+B.sections.map(s=>`<a class="sec" href="#/${s.key}" ${r===s.key?'aria-current="page"':''}>${esc(s.name)}</a>`).join('')+`<a href="#/brands" class="xtra" ${r==='brands'?'aria-current="page"':''}>Brands</a><a href="#/look" class="xtra" ${r==='look'?'aria-current="page"':''}>✨ Build a look</a><a href="#/saved" class="wl-link" ${r==='saved'?'aria-current="page"':''}>♥ Saved<span class="n" id="wl-n">${WL.size}</span></a>`;
+  $('secbar').innerHTML=`<a href="#/" ${r==='home'?'aria-current="page"':''}>Home</a>`+B.sections.map(s=>`<a href="#/${s.key}" ${r===s.key?'aria-current="page"':''}>${esc(s.name)}</a>`).join('')+`<a href="#/brands" ${r==='brands'?'aria-current="page"':''}>Brand Atlas</a><a href="#/look" ${r==='look'?'aria-current="page"':''}>✨ Build a look</a>`;
 }
 (function ticker(){
   const top=SHOP.map(s=>P.filter(p=>p.sec===s.key).sort((a,b)=>score(b)-score(a))[0]).filter(Boolean);
-  const items=[...D.ticker,...top.map(p=>`<b>${esc(SEC[p.sec].name)}</b> ${esc(p.short)} · ${p.price?inr(p.price):'see price'} · ${p.rating.toFixed(1)}★`)];
+  const items=[`<b>New</b> ✨ Build a look · Brand Atlas · ${Object.values(TAX).reduce((t,L)=>t+L.length,0)} categories · ${P.length} top-rated picks`,...D.ticker,...top.map(p=>`<b>${esc(SEC[p.sec].name)}</b> ${esc(p.short)} · ${p.price?inr(p.price):'see price'} · ${p.rating.toFixed(1)}★`)];
   const once=items.map(t=>`<span>${t}</span>`).join(''); $('ticker').innerHTML=once+once;
 })();
 
@@ -474,7 +592,7 @@ function row(p,opts={}){
   const off=p.mrp&&p.price?Math.round((1-p.price/p.mrp)*100):0;
   const third=p.sec==='sole'?`<td>${drops(p.rain)}<span class="${rc}">${rw}</span></td>`:`<td>${p.use.slice(0,3).map(u=>`<span class="tag" style="display:inline-block;margin:0 4px 4px 0">${esc(USE[u]||u)}</span>`).join('')}</td>`;
   return `<tr class="${p.rain>=4?'rainy':''}">
-   <th scope="row"><span class="prod"><span class="thumb">${art(p.shape)}</span><span><small>${esc(p.brand)}</small>${esc(p.name)}<span class="tags">${opts.mixed?`<span class="secpill" style="--c:${accent(s)}">${esc(s.name)}</span>`:''}<span class="tag">${AUD[p.aud]}</span><span class="tag">${esc(CAT[p.cat]||p.cat)}</span></span></span></span></th>
+   <th scope="row"><span class="prod"><span class="thumb">${art(p.shape)}</span><span><small>${esc(p.brand)}</small>${esc(p.name)}<span class="tags">${opts.mixed?`<span class="secpill" style="--c:${accent(s)}">${esc(s.name)}</span>`:''}<span class="tag">${AUD[p.aud]}</span><span class="tag">${esc(catName(p.sec,p.aud,p.cat))}</span></span></span></span></th>
    <td class="p">${p.price?inr(p.price):'Check live'}${p.mrp&&p.price?`<s>${inr(p.mrp)}</s>`:''}<small>${esc(p.where)} · ${esc(p.seen)}${off>=10?` · ${off}% off MRP`:''}</small>${p.price?spark(p.history):''}</td>
    <td><span class="num">${p.rating.toFixed(1)}★</span> <span class="muted" style="font-size:.82rem">from ${esc(countLabel(p))}</span><span class="rbar" aria-hidden="true"><i data-w="${p.rating*20}"></i></span></td>
    ${third}
@@ -510,7 +628,7 @@ function renderCompare(){
   if(C.length<2){ box.innerHTML=`<div class="empty"><h3>${C.length?'Add one more product':'Pick products to compare'}</h3><p class="msg">Choose <b>＋ Compare</b> on 2 or 3 products. ${C.length?`So far: ${esc(C[0].brand+' '+C[0].name)}.`:''}</p></div>`; return; }
   const best=(f,dir)=>{const v=C.map(f).filter(x=>x!=null);if(!v.length)return null;return dir>0?Math.max(...v):Math.min(...v)};
   const allSole=C.every(p=>p.sec==='sole');
-  const rows=[['Section',p=>esc(SEC[p.sec].name+' · '+(CAT[p.cat]||p.cat))],['Price',p=>p.price?inr(p.price)+` on ${esc(p.where)}`:'Check live',p=>p.price,-1],['Rating',p=>`${p.rating.toFixed(1)}★`,p=>p.rating,1],['Buyers who rated',p=>esc(countLabel(p)),p=>p.count,1],
+  const rows=[['Section',p=>esc(SEC[p.sec].name+' · '+catName(p.sec,p.aud,p.cat))],['Price',p=>p.price?inr(p.price)+` on ${esc(p.where)}`:'Check live',p=>p.price,-1],['Rating',p=>`${p.rating.toFixed(1)}★`,p=>p.rating,1],['Buyers who rated',p=>esc(countLabel(p)),p=>p.count,1],
     ...(allSole?[['Rain',p=>`${drops(p.rain)}${rainWord(p)[1]}`,p=>p.rain,1],['Look',p=>p.formal>=4?'Smart':p.formal>=3?'Smart-casual':'Casual',p=>p.formal,1]]:[]),
     ['Best for',p=>p.use.map(u=>USE[u]||u).join(', ')],['Buyers praise',p=>p.pros.map(esc).join('; ')],['Watch out',p=>p.cons.map(esc).join('; ')],['Verdict',p=>esc(p.verdict)]];
   box.innerHTML=`<div class="tablebox"><table class="cmp-table"><caption>Comparing ${C.length} products</caption>
@@ -545,6 +663,7 @@ function wireRequest(){
 }
 
 /* ================= views ================= */
+const POPCATS=[['thread','men','kurtas'],['thread','women','sarees'],['sole','men','sneakers'],['wear','all','travel'],['wear','all','smartwatch'],['thread','women','dresses'],['glam','all','fragrance'],['wear','all','backpacks'],['thread','men','jeans'],['gem','women','anklets'],['sole','women','sneakers'],['wear','all','trek'],['aesthetic','all','walldecor'],['wear','all','wallets'],['glam','men','grooming'],['wonder','kids','puzzles'],['aesthetic','all','lamps'],['wear','all','sunglasses'],['thread','men','track'],['wear','all','office']];
 function viewHome(){
   setAccent(DARK?'#6CC3CE':'#246B76');
   const n=P.length, ratings=P.reduce((s,p)=>s+(p.count||0),0);
@@ -558,8 +677,8 @@ function viewHome(){
     <h1>Shop <span class="c">smarter</span>. Look <span class="r">sharper</span>.</h1>
     <p class="lede">${esc(B.name)} compares well-rated footwear, clothes, bags, watches, jewellery, cosmetics, books, home decor and toys across Amazon, Flipkart, Myntra, AJIO, Meesho, Nykaa, JioMart and Tata CLiQ: prices, real buyer ratings, card offers and gift ideas, in one place.</p>
     <form class="bigsearch" id="bigsearch" role="search"><label for="q" class="sr">Search everything</label><input id="q" type="search" placeholder="Try “silver earrings”, “rain sandals”, “board games”" autocomplete="off"><button class="btn pri" type="submit">Search</button></form>
-    <p class="try">Popular: <button type="button" data-q="rain sandals">rain sandals</button><button type="button" data-q="kurta">kurta sets</button><button type="button" data-q="silver earrings">silver earrings</button><button type="button" data-q="sling bag">sling bags</button><button type="button" data-q="fairy lights">fairy lights</button><button type="button" data-q="books">books</button><button type="button" data-q="board games">board games</button></p>
-    <div class="stats" aria-label="Site numbers"><div><b class="num" data-count="${n}">0</b><span>well-rated products</span></div><div><b class="num" data-count="${SHOP.length}">0</b><span>shopping sections</span></div><div><b class="num" data-count="${ratings}">0</b><span>buyer ratings read</span></div><div><b class="num" data-count="${D.offers.length}">0</b><span>offers tracked</span></div></div>
+    <p class="try">Popular: <button type="button" data-q="rain sandals">rain sandals</button><button type="button" data-q="saree">sarees</button><button type="button" data-q="smartwatch">smartwatches</button><button type="button" data-q="trolley">trolley bags</button><button type="button" data-q="perfume gift">perfume gifts</button><button type="button" data-q="silver earrings">silver earrings</button><button type="button" data-q="board games">board games</button></p>
+    <div class="stats" aria-label="Site numbers"><div><b class="num" data-count="${n}">0</b><span>well-rated products</span></div><div><b class="num" data-count="${SHOP.length}">0</b><span>shopping sections</span></div><div><b class="num" data-count="${ratings}">0</b><span>buyer ratings read</span></div><div><b class="num" data-count="${ATLAS.length}">0</b><span>brands to know</span></div></div>
     <div class="install" id="install"><span>📲 Use ${esc(B.name)} like an app on your phone.</span><button class="btn acc" type="button" id="install-btn">Install</button></div>
   </div>
   <div class="orbit" aria-hidden="true"><div class="face">${dialSVG('YOUR STYLE, TICKED')}</div><div class="ring">${moons}</div>
@@ -567,6 +686,14 @@ function viewHome(){
   </div></div>
   <section id="sections" aria-labelledby="sections-h"><div class="wrap"><div class="sec-head"><p class="eyebrow">Choose a section</p><h2 id="sections-h">What are you shopping for?</h2></div>
     <div class="cards">${B.sections.map((s,i)=>{const t=topOf(s.key);return `<a class="scard ${['wrap','deal'].includes(s.key)?'span2':''}" href="#/${s.key}" style="--c:${accent(s)}"><span class="glow" aria-hidden="true"></span><span class="ic">${icon(s.key,accent(s))}</span><span class="what">${esc(s.what)}</span><h3>${nameHTML(s.name)}</h3><p>${esc(s.line)}</p><span class="foot"><span>${secCount(s.key)} ${s.key==='deal'?'offers & sales':s.key==='wrap'?'gift ideas':'products'}</span><span class="muted">${t?'Top: '+esc(t.short):'Updated twice a day'}</span></span></a>`}).join('')}</div>
+    <div class="promos">
+      <a class="promo" href="#/look"><span class="new">NEW</span><span class="pi" aria-hidden="true">✨</span><span><h3>Build a look</h3><p>Pick who it's for, the occasion and a budget. We put together a full, top-rated outfit in seconds.</p></span></a>
+      <a class="promo alt" href="#/brands"><span class="new">NEW</span><span class="pi" aria-hidden="true">🏷️</span><span><h3>Brand Atlas</h3><p>${ATLAS.length} brands from budget to premium, and what each one is known for.</p></span></a>
+    </div>
+  </div></section>
+  <section id="popcats" aria-labelledby="popcats-h"><div class="wrap"><div class="sec-head"><p class="eyebrow">Shop by category</p><h2 id="popcats-h">Jump straight in</h2><p class="lede">${Object.values(TAX).reduce((t,L)=>t+L.length,0)} categories across every Watch. Swipe for more.</p></div>
+    <div class="catstrip">${POPCATS.map(([sec,aud,k])=>{const c=catInfo(sec,aud,k);if(!c)return '';const n=P.filter(p=>p.sec===sec&&p.cat===k&&(c.aud==='all'||p.aud===c.aud||p.aud==='unisex')).length;
+      return `<a class="ctile" href="#/${sec}/${aud==='all'?'all':aud}/${k}" style="--acc:${accent(SEC[sec])};--acc-soft:color-mix(in srgb, ${accent(SEC[sec])} 16%, #fff)"><span class="cart" aria-hidden="true">${art(c.art)}</span><b>${esc(c.label)}${aud!=='all'?' <span class="muted" style="font-weight:500">· '+AUD[aud]+'</span>':''}</b><span class="meta">${esc(SEC[sec].name)} · ${n} pick${n===1?'':'s'}</span></a>`}).join('')}</div>
   </div></section>
   <section id="best" aria-labelledby="best-h"><div class="wrap"><div class="sec-head"><p class="eyebrow">Across every section</p><h2 id="best-h">Most trusted right now</h2><p class="lede">The products with the strongest ratings from the most buyers.</p></div>
     <div id="best-box">${ptable(best,'Top rated across '+esc(B.name),'Sorted by rating and number of buyers',{mixed:true})}</div>
@@ -599,13 +726,18 @@ function dialSVG(text,hands=true){
 }
 
 /* ---- shopping section ---- */
-function viewSection(key,aud){
+function viewSection(key,aud,cat0,brand0){
   const s=SEC[key]; setAccent(accent(s));
-  S={aud:aud||'all',q:'',cat:'',use:'',max:'',sort:'best',rain:false,wl:false};
-  const mine=P.filter(p=>p.sec===key);
-  const auds=['all',...['men','women','kids','unisex'].filter(a=>mine.some(p=>p.aud===a))].filter((a,i,arr)=>!(a==='unisex'&&arr.includes('all')));
+  S={aud:aud||'all',q:'',cat:'',catAud:'',use:'',max:'',sort:'best',rain:false,wl:false,brand:brand0||'',tier:0};
+  const mine=P.filter(p=>p.sec===key), tax=TAX[key]||[];
+  const has=new Set(mine.map(p=>p.aud)); tax.forEach(c=>has.add(c.aud));
+  const auds=['all',...['men','women','kids'].filter(a=>has.has(a))];
   const top=[...mine].sort((a,b)=>score(b)-score(a))[0];
-  const tries={sole:['rain','office','school','running','functions'],thread:['kurta','office','polo','festival','kids'],gem:['silver','earrings','wedding','under 500','bracelet'],glam:['kajal','sunscreen','waterproof','oily skin','under 200'],wonder:['board games','age 7','cars','craft','family'],wear:['backpack','sling bag','watch','handbag','travel'],flip:['fiction','self-help','journal','money','gift'],aesthetic:['fairy lights','candle','plants','festival','under 300']}[key]||[];
+  const nBrands=new Set([...mine.map(p=>p.brand.toLowerCase()),...tax.flatMap(c=>c.brands.map(b=>b[0].toLowerCase()))]).size;
+  const tries={sole:['rain','sneakers','slides','office','school'],thread:['kurta','saree','jeans','dress','track pants'],gem:['silver','anklet','bangles','earrings','men chain'],glam:['kajal','face wash','perfume','shampoo','trimmer'],wonder:['board games','puzzle','lego','teddy','age 7'],wear:['college bag','trolley','smartwatch','wallet','sunglasses'],flip:['fiction','self-help','journal','money','gift'],aesthetic:['fairy lights','wall art','bedsheet','study lamp','candle']}[key]||[];
+  const inAud=p=>S.aud==='all'||p.aud===S.aud||p.aud==='unisex';
+  const inCat=(p,k,ca)=>p.cat===k&&(!ca||ca==='all'||p.aud===ca||p.aud==='unisex');
+  if(cat0){const c=tax.find(c=>c.key===cat0&&(c.aud===S.aud||c.aud==='all'))||tax.find(c=>c.key===cat0);if(c){S.cat=c.key;S.catAud=c.aud}}
   $('main').innerHTML=`
   <div class="hero"><canvas id="fx" aria-hidden="true"></canvas><div class="wrap hero-grid"><div>
     <p class="eyebrow">${esc(s.what)} · ${esc(B.name)}</p>
@@ -614,7 +746,7 @@ function viewSection(key,aud){
     <form class="bigsearch" id="bigsearch" role="search"><label for="q" class="sr">Search ${esc(s.what)}</label><input id="q" type="search" placeholder="Search ${esc(s.what.toLowerCase())}" autocomplete="off"><button class="btn pri" type="submit">Search</button></form>
     <div class="chips" role="group" aria-label="Shop for">${auds.map(a=>`<button type="button" class="chip" data-aud="${a}" aria-pressed="${a===S.aud}">${AUD[a]}</button>`).join('')}</div>
     <p class="try">Popular: ${tries.map(t=>`<button type="button" data-q="${esc(t)}">${esc(t)}</button>`).join('')}</p>
-    <div class="stats" aria-label="Section numbers"><div><b class="num" data-count="${mine.length}">0</b><span>products</span></div><div><b class="num" data-count="${new Set(mine.map(p=>p.brand)).size}">0</b><span>brands</span></div><div><b class="num" data-count="${mine.reduce((t,p)=>t+(p.count||0),0)}">0</b><span>buyer ratings read</span></div><div><b class="num" data-count="${mine.filter(p=>p.mrp&&p.price&&p.price<=p.mrp*.6).length}">0</b><span>40%+ off MRP</span></div></div>
+    <div class="stats" aria-label="Section numbers"><div><b class="num" data-count="${mine.length}">0</b><span>top-rated picks</span></div><div><b class="num" data-count="${tax.length}">0</b><span>categories</span></div><div><b class="num" data-count="${nBrands}">0</b><span>brands to know</span></div><div><b class="num" data-count="${mine.reduce((t,p)=>t+(p.count||0),0)}">0</b><span>buyer ratings read</span></div></div>
     ${key==='sole'?`<div class="hero-actions"><button type="button" class="monsoon" id="monsoon" aria-pressed="false">☔ Monsoon mode</button></div>`:''}
   </div>
   <div class="dial" aria-hidden="true"><div style="position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 50% 38%,var(--paper),var(--acc-soft));border:1px solid var(--line)"></div>
@@ -622,11 +754,17 @@ function viewSection(key,aud){
     <div style="position:absolute;inset:30%;display:grid;place-items:center" class="float">${icon(key,accent(s)).replace('<svg','<svg style="width:100%;height:100%;color:'+accent(s)+'"')}</div>
     ${top?`<div class="dial-tag"><span style="opacity:.7">Top rated now</span><b>${esc(top.short)}</b><span class="num">${top.price?inr(top.price)+' · ':''}${top.rating.toFixed(1)}★</span></div>`:''}</div>
   </div></div>
+  <section id="cats" aria-labelledby="cats-h"><div class="wrap">
+    <div class="sec-head"><p class="eyebrow">Categories</p><h2 id="cats-h">Shop by category</h2><p class="lede">Tap a category to see its top-rated picks and the brands worth knowing, from budget to premium.</p></div>
+    <div id="cattiles"></div>
+    <div id="bguide" aria-live="polite"></div>
+  </div></section>
   <section id="explore" aria-labelledby="explore-h"><div class="wrap">
-    <div class="sec-head"><p class="eyebrow">Explore</p><h2 id="explore-h">Find your pick</h2><p class="lede">Filter by who it's for, type and use. Tick <b>Compare</b> on up to 3 products, or <b>♡ Save</b> them for later.</p></div>
-    <div class="filters">
+    <div class="sec-head"><p class="eyebrow">Explore</p><h2 id="explore-h">Find your pick</h2><p class="lede">Filter by who it's for, category, brand and use. Tick <b>Compare</b> on up to 3 products, or <b>♡ Save</b> them for later.</p></div>
+    <div class="filters" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr))">
       <div class="fld wide2"><label for="f-q">Search</label><input id="f-q" type="search" placeholder="Brand, type or use" autocomplete="off"></div>
-      <div class="fld"><label for="f-cat">Type</label><select id="f-cat"></select></div>
+      <div class="fld"><label for="f-cat">Category</label><select id="f-cat"></select></div>
+      <div class="fld"><label for="f-brand">Brand</label><select id="f-brand"></select></div>
       <div class="fld"><label for="f-use">Use</label><select id="f-use"></select></div>
       <div class="fld"><label for="f-max">Max price</label><select id="f-max"><option value="">Any</option><option value="200">₹200</option><option value="500">₹500</option><option value="1000">₹1,000</option><option value="1500">₹1,500</option><option value="2000">₹2,000</option><option value="3000">₹3,000</option><option value="5000">₹5,000</option></select></div>
       <div class="fld"><label for="f-sort">Sort</label><select id="f-sort"><option value="best">Best rated</option><option value="price">Price: low to high</option><option value="pricehi">Price: high to low</option><option value="popular">Most reviewed</option><option value="deal">Biggest discount</option>${key==='sole'?'<option value="rain">Most rain-ready</option><option value="formal">Smartest look</option>':''}</select></div>
@@ -638,30 +776,77 @@ function viewSection(key,aud){
   ${compareSection()}
   ${key==='sole'||key==='thread'?sizeSection(key):''}
   ${requestSection(key)}`;
-  const fillSel=()=>{const inA=mine.filter(p=>S.aud==='all'||p.aud===S.aud||p.aud==='unisex');const cats=[...new Set(inA.map(p=>p.cat))],uses=[...new Set(inA.flatMap(p=>p.use))];
-    $('f-cat').innerHTML='<option value="">All types</option>'+cats.map(c=>`<option value="${c}">${esc(CAT[c]||c)}</option>`).join('');
+
+  const visCats=()=>tax.filter(c=>S.aud==='all'||c.aud===S.aud||c.aud==='all');
+  const picksIn=c=>mine.filter(p=>inCat(p,c.key,c.aud)&&inAud(p));
+  const tierHTML=t=>`<span class="tier t${t}" title="${TIERW[t]}">${'₹'.repeat(t)}<i>${'₹'.repeat(3-t)}</i></span>`;
+  const renderTiles=()=>{
+    const L=visCats(), groups=S.aud==='all'?['men','women','kids','all']:[S.aud,'all'];
+    const used=groups.filter(g=>L.some(c=>c.aud===g));
+    const head={men:'For men',women:'For women',kids:'For kids',all:used.length>1?'For everyone':''};
+    $('cattiles').innerHTML=used.map(g=>`${head[g]&&used.length>1?`<p class="audhead">${head[g]}</p>`:''}<div class="cattiles">${L.filter(c=>c.aud===g).map(c=>{const n=picksIn(c).length;
+      return `<button type="button" class="ctile" data-cat="${c.key}" data-caud="${c.aud}" aria-pressed="${S.cat===c.key&&S.catAud===c.aud}"><span class="cart" aria-hidden="true">${art(c.art)}</span><b>${esc(c.label)}</b><span class="meta ${n?'':'none'}">${n?n+' pick'+(n>1?'s':'')+' · ':''}${c.brands.length} brands</span><span class="bl">${c.brands.slice(0,3).map(b=>esc(b[0])).join(' · ')}</span></button>`}).join('')}</div>`).join('');
+    document.querySelectorAll('#cattiles .ctile').forEach(b=>b.onclick=()=>pickCat(b.dataset.cat,b.dataset.caud,true));
+  };
+  const guide=()=>{
+    const box=$('bguide'); const c=S.cat&&(tax.find(x=>x.key===S.cat&&x.aud===S.catAud)||tax.find(x=>x.key===S.cat&&(x.aud===S.aud||x.aud==='all'))||tax.find(x=>x.key===S.cat));
+    if(!c){box.innerHTML='';return}
+    const n=picksIn(c).length, who=c.aud==='all'?'':` for ${AUD[c.aud].toLowerCase()}`;
+    const BL=c.brands.filter(b=>!S.tier||b[1]===S.tier);
+    const st=(STORESBY[key]||ALLSTORES).slice(0,4);
+    box.innerHTML=`<div class="bguide"><div class="bguide-head"><div><p class="eyebrow">Brand guide</p><h3>${esc(c.label)}${esc(who)}</h3><p class="msg" style="margin-top:6px">${n?`<b>${n}</b> top-rated pick${n>1?'s':''} below. `:'No 4★ picks tracked yet. '}${c.brands.length} brands worth knowing, from budget to premium.</p></div>
+      <div class="tierchips" role="group" aria-label="Price level">${[0,1,2,3].map(t=>`<button type="button" class="chip" data-tier="${t}" aria-pressed="${S.tier===t}">${t?TIER[t]+' '+TIERW[t]:'All levels'}</button>`).join('')}</div></div>
+      <div class="bgrid">${BL.map(([nm,t,kn])=>{const k=brandPicks(nm).filter(p=>p.sec===key).length;
+        return `<div class="bcard"><div class="top"><span class="nm">${esc(nm)}</span>${tierHTML(t)}</div><p class="kn">${esc(kn)}</p><div class="links">${k?`<button type="button" class="pk" data-brand="${esc(nm)}">${k} pick${k>1?'s':''} ↓</button>`:''}${st.map(sn=>`<a href="${STORES[sn](encodeURIComponent(nm+' '+c.q),nm+' '+c.q)}" target="_blank" rel="noopener">${sn}<span class="sr"> for ${esc(nm)}</span></a>`).join('')}</div></div>`}).join('')||'<p class="msg">No brands at this price level.</p>'}</div>
+      <div class="allstores"><span>Browse all ${esc(c.label.toLowerCase())}:</span>${storesFor(c.q,key).map(([k,v])=>`<a href="${v}" target="_blank" rel="noopener">${k}</a>`).join('')}</div>
+      <div class="picked">${n?`<a class="btn acc" href="#explore">See ${n} pick${n>1?'s':''} ↓</a>`:''}<button type="button" class="chip" id="cat-clear">✕ Show all categories</button></div></div>`;
+    box.querySelectorAll('[data-tier]').forEach(b=>b.onclick=()=>{S.tier=+b.dataset.tier;guide()});
+    box.querySelectorAll('[data-brand]').forEach(b=>b.onclick=()=>{S.brand=b.dataset.brand;fillSel();draw();sync();$('explore').scrollIntoView({behavior:RM?'auto':'smooth'})});
+    $('cat-clear').onclick=()=>pickCat('','',false);
+  };
+  const sync=()=>{try{const h='#/'+key+(S.aud!=='all'||S.cat||S.brand?'/'+S.aud:'')+(S.cat||S.brand?'/'+(S.cat||'-'):'')+(S.brand?'/'+encodeURIComponent(S.brand):'');history.replaceState(null,'',h)}catch(e){}};
+  function pickCat(k,ca,scroll){
+    if(k&&S.cat===k&&S.catAud===ca){k='';ca=''}
+    S.cat=k;S.catAud=ca;S.brand='';S.tier=0;
+    document.querySelectorAll('#cattiles .ctile').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cat===k&&b.dataset.caud===ca));
+    guide();fillSel();draw();sync();
+    if(scroll&&k) $('bguide').scrollIntoView({behavior:RM?'auto':'smooth',block:'start'});
+  }
+  const fillSel=()=>{const inA=mine.filter(inAud);const cats=[...new Set(inA.map(p=>p.cat))];
+    const inC=inA.filter(p=>!S.cat||inCat(p,S.cat,S.catAud));const uses=[...new Set(inC.flatMap(p=>p.use))];const brands=[...new Set(inC.map(p=>p.brand))].sort((a,b)=>a.localeCompare(b));
+    $('f-cat').innerHTML='<option value="">All categories</option>'+cats.map(c=>{const p=inA.find(x=>x.cat===c);return `<option value="${c}">${esc(catName(key,S.aud==='all'?p.aud:S.aud,c))}</option>`}).join('');
+    $('f-brand').innerHTML='<option value="">All brands</option>'+brands.map(b=>`<option value="${esc(b)}">${esc(b)}</option>`).join('');
     $('f-use').innerHTML='<option value="">Any use</option>'+Object.keys(USE).filter(u=>uses.includes(u)).map(u=>`<option value="${u}">${esc(USE[u])}</option>`).join('');
-    if(!cats.includes(S.cat))S.cat=''; if(!uses.includes(S.use))S.use=''; $('f-cat').value=S.cat; $('f-use').value=S.use;};
+    if(S.cat&&!cats.includes(S.cat)&&!tax.some(c=>c.key===S.cat)) S.cat='';
+    if(!uses.includes(S.use))S.use='';
+    const bm=brands.find(b=>b.toLowerCase()===S.brand.toLowerCase()); if(S.brand&&!bm&&!S.cat) S.brand=''; else if(bm) S.brand=bm;
+    $('f-cat').value=cats.includes(S.cat)?S.cat:''; $('f-use').value=S.use; $('f-brand').value=bm||'';};
   const draw=()=>{
     const by={best:(a,b)=>score(b)-score(a),price:(a,b)=>(a.price??1e9)-(b.price??1e9),pricehi:(a,b)=>(b.price??-1)-(a.price??-1),popular:(a,b)=>b.count-a.count,deal:(a,b)=>((b.mrp&&b.price)?1-b.price/b.mrp:0)-((a.mrp&&a.price)?1-a.price/a.mrp:0),rain:(a,b)=>b.rain-a.rain||score(b)-score(a),formal:(a,b)=>b.formal-a.formal||score(b)-score(a)};
-    const L=mine.filter(p=>(S.aud==='all'||p.aud===S.aud||p.aud==='unisex')&&(!S.cat||p.cat===S.cat)&&(!S.use||p.use.includes(S.use))&&(!S.max||(p.price&&p.price<=+S.max))&&(!S.rain||p.rain>=4)&&(!S.wl||WL.has(p.id))&&matchQ(p,S.q)).sort(by[S.sort]);
+    const L=mine.filter(p=>inAud(p)&&(!S.cat||inCat(p,S.cat,S.catAud))&&(!S.brand||p.brand.toLowerCase()===S.brand.toLowerCase())&&(!S.use||p.use.includes(S.use))&&(!S.max||(p.price&&p.price<=+S.max))&&(!S.rain||p.rain>=4)&&(!S.wl||WL.has(p.id))&&matchQ(p,S.q)).sort(by[S.sort]);
     $('count').textContent=`${L.length} of ${mine.length} shown`;
-    const cap=S.aud==='all'?esc(s.what):esc(s.what)+' for '+AUD[S.aud].toLowerCase();
+    const cn=S.cat?catName(key,S.catAud&&S.catAud!=='all'?S.catAud:S.aud,S.cat):s.what;
+    const cap=esc((S.brand?S.brand+' · ':'')+cn)+(S.aud==='all'?'':' for '+AUD[S.aud].toLowerCase());
+    const sq=((S.brand?S.brand+' ':'')+(S.q||(S.cat?(catInfo(key,S.catAud,S.cat)||{}).q||cn:s.what))+(S.aud!=='all'&&!S.cat?' '+AUD[S.aud]:'')).trim();
     $('list').innerHTML=L.length?ptable(L,cap,`${L.length} product${L.length===1?'':'s'}, ${$('f-sort').selectedOptions[0].text.toLowerCase()}`,{sole:key==='sole'}):
-      `<div class="empty"><h3>Nothing here matches yet</h3><p class="msg">Try removing a filter, or search the stores directly:</p><ul class="stores">${storesFor((S.q||s.what)+(S.aud!=='all'?' '+AUD[S.aud]:''),s.key).map(([k,v])=>`<li><a href="${v}" target="_blank" rel="noopener">${k}</a></li>`).join('')}</ul><p class="msg" style="margin-top:10px">Or <a href="#request">ask us to track it</a>.</p></div>`;
+      `<div class="empty"><h3>No 4★ picks here yet</h3><p class="msg">We only list products rated 4.0★ or higher by at least ${D.minCount} buyers. Try removing a filter, use the brand guide above, or search the stores directly:</p><ul class="stores">${storesFor(sq,s.key).map(([k,v])=>`<li><a href="${v}" target="_blank" rel="noopener">${k}</a></li>`).join('')}</ul><p class="msg" style="margin-top:10px">Or <a href="#request">ask us to track it</a>.</p></div>`;
     fillBars($('list'));
   };
-  const setAud=a=>{S.aud=a;document.querySelectorAll('[data-aud]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.aud===a));fillSel();draw();try{history.replaceState(null,'','#/'+key+(a==='all'?'':'/'+a))}catch(e){}};
+  const setAud=a=>{S.aud=a;if(S.catAud&&S.catAud!=='all'&&a!=='all'&&S.catAud!==a){S.cat='';S.catAud=''}S.brand='';
+    document.querySelectorAll('[data-aud]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.aud===a));renderTiles();guide();fillSel();draw();sync()};
   document.querySelectorAll('[data-aud]').forEach(b=>b.onclick=()=>setAud(b.dataset.aud));
   $('bigsearch').onsubmit=e=>{e.preventDefault();S.q=$('q').value;$('f-q').value=S.q;draw();$('explore').scrollIntoView({behavior:RM?'auto':'smooth'})};
   document.querySelectorAll('[data-q]').forEach(b=>b.onclick=()=>{$('q').value=b.dataset.q;$('bigsearch').requestSubmit()});
   let qt;$('f-q').oninput=e=>{clearTimeout(qt);qt=setTimeout(()=>{S.q=e.target.value;$('q').value=S.q;draw()},180)};
-  $('f-cat').onchange=e=>{S.cat=e.target.value;draw()}; $('f-use').onchange=e=>{S.use=e.target.value;draw()}; $('f-max').onchange=e=>{S.max=e.target.value;draw()}; $('f-sort').onchange=e=>{S.sort=e.target.value;draw()};
+  $('f-cat').onchange=e=>{const k=e.target.value;if(!k){pickCat('','',false);return}const c=tax.find(c=>c.key===k&&(c.aud===S.aud||c.aud==='all'))||tax.find(c=>c.key===k&&mine.some(p=>p.cat===k&&p.aud===c.aud))||tax.find(c=>c.key===k);pickCat(k,c?c.aud:'',false)};
+  $('f-brand').onchange=e=>{S.brand=e.target.value;draw();sync()};
+  $('f-use').onchange=e=>{S.use=e.target.value;draw()}; $('f-max').onchange=e=>{S.max=e.target.value;draw()}; $('f-sort').onchange=e=>{S.sort=e.target.value;draw()};
   if($('f-rain')) $('f-rain').onchange=e=>{S.rain=e.target.checked;draw()};
   $('f-wl').onchange=e=>{S.wl=e.target.checked;draw()};
-  $('f-reset').onclick=()=>{S={...S,q:'',cat:'',use:'',max:'',sort:'best',rain:false,wl:false};$('f-q').value=$('q').value='';$('f-max').value='';$('f-sort').value='best';if($('f-rain'))$('f-rain').checked=false;$('f-wl').checked=false;fillSel();draw()};
+  $('f-reset').onclick=()=>{S={...S,q:'',use:'',max:'',sort:'best',rain:false,wl:false,brand:''};$('f-q').value=$('q').value='';$('f-max').value='';$('f-sort').value='best';if($('f-rain'))$('f-rain').checked=false;$('f-wl').checked=false;pickCat('','',false)};
   if($('monsoon')) $('monsoon').onclick=()=>{const on=$('monsoon').getAttribute('aria-pressed')!=='true';$('monsoon').setAttribute('aria-pressed',on);document.body.classList.toggle('monsoon-on',on);if(FX)FX.heavy=on;if(on){S.sort='rain';$('f-sort').value='rain';draw()}};
-  fillSel(); draw(); if(key==='sole'||key==='thread') wireSize(key);
+  renderTiles(); guide(); fillSel(); draw(); if(key==='sole'||key==='thread') wireSize(key);
+  if(cat0||brand0) setTimeout(()=>$(brand0?'explore':'bguide').scrollIntoView({behavior:'auto',block:'start'}),60);
   startFx(s.effect);
 }
 function sizeSection(key){
@@ -732,6 +917,134 @@ function viewDeal(){
 }
 
 /* ---- saved ---- */
+/* ---- Brand Atlas ---- */
+function viewBrands(sec0){
+  setAccent(DARK?'#E09155':'#A4561F');
+  const st={q:'',sec:SEC[sec0]?sec0:'',tier:0};
+  const featured=[...ATLAS].sort((a,b)=>brandPicks(b.name).length-brandPicks(a.name).length||b.cats.length-a.cats.length).slice(0,14).map(b=>b.name);
+  const ring=`<svg viewBox="0 0 400 400" aria-hidden="true"><defs><path id="bo1" d="M200,200 m-160,0 a160,160 0 1,1 320,0 a160,160 0 1,1 -320,0"/><path id="bo2" d="M200,200 m-112,0 a112,112 0 1,1 224,0 a112,112 0 1,1 -224,0"/></defs>
+    <circle cx="200" cy="200" r="186" fill="none" stroke="var(--line)" stroke-width="2"/><circle cx="200" cy="200" r="136" fill="none" stroke="var(--line)" stroke-dasharray="4 6"/>
+    <g class="spinslow"><text font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="25" letter-spacing="1.5" fill="var(--ink)"><textPath href="#bo1">${esc(featured.slice(0,8).join('  ·  ').toUpperCase())}  ·</textPath></text></g>
+    <g class="spinslow rev"><text font-family="IBM Plex Mono,monospace" font-size="15" letter-spacing="2" fill="var(--acc)"><textPath href="#bo2">${esc(featured.slice(8).join(' · ').toUpperCase())} ·</textPath></text></g>
+    <text x="200" y="196" text-anchor="middle" font-family="Big Shoulders Display,Impact,sans-serif" font-weight="900" font-size="58" fill="var(--ink)">${ATLAS.length}</text>
+    <text x="200" y="226" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" letter-spacing="3" fill="var(--muted)">BRANDS TO KNOW</text>
+    <text x="200" y="256" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="16" fill="var(--cognac)">₹ · ₹₹ · ₹₹₹</text></svg>`;
+  $('main').innerHTML=`
+  <div class="hero"><canvas id="fx" aria-hidden="true"></canvas><div class="wrap hero-grid"><div>
+    <p class="eyebrow">Brand Atlas · ${esc(B.name)}</p>
+    <h1>Know your <span class="r">brands</span>.</h1>
+    <p class="lede">${ATLAS.length} brands across every Watch, marked budget (₹), mid-range (₹₹) or premium (₹₹₹), with what each is known for and quick links to shop them.</p>
+    <form class="bigsearch" id="bsearch" role="search"><label for="bq" class="sr">Search brands</label><input id="bq" type="search" placeholder="Try “Puma”, “silver”, “trolley”" autocomplete="off"><button class="btn pri" type="submit">Find</button></form>
+    <div class="chips" role="group" aria-label="Section">${['',...SHOP.map(s=>s.key)].map(k=>`<button type="button" class="chip" data-bsec="${k}" aria-pressed="${st.sec===k}">${k?esc(SEC[k].name):'All Watches'}</button>`).join('')}</div>
+    <div class="chips" role="group" aria-label="Price level">${[0,1,2,3].map(t=>`<button type="button" class="chip" data-btier="${t}" aria-pressed="${t===0}">${t?TIER[t]+' '+TIERW[t]:'Every price level'}</button>`).join('')}</div>
+  </div><div class="dial brandring">${ring}</div></div></div>
+  <section id="atlas" aria-labelledby="atlas-h"><div class="wrap"><div class="sec-head"><p class="eyebrow">A to Z</p><h2 id="atlas-h">All brands</h2><p class="lede" id="acount" role="status" aria-live="polite"></p></div>
+    <nav class="az" id="az" aria-label="Jump to letter"></nav><div id="alist"></div></div></section>`;
+  const tierHTML=t=>`<span class="tier t${t}" title="${TIERW[t]}">${'₹'.repeat(t)}<i>${'₹'.repeat(3-t)}</i></span>`;
+  const draw=()=>{
+    const q=st.q.toLowerCase().trim();
+    const L=ATLAS.filter(b=>(!st.sec||b.secs.includes(st.sec))&&(!st.tier||b.tier===st.tier)&&(!q||(b.name+' '+b.known.join(' ')+' '+b.cats.map(c=>c.label+' '+SEC[c.sec].what).join(' ')).toLowerCase().includes(q)));
+    $('acount').textContent=`${L.length} brand${L.length===1?'':'s'}${st.sec?' in '+SEC[st.sec].name:''}${st.tier?' · '+TIERW[st.tier]:''}.`;
+    const letters=[...new Set(L.map(b=>b.name[0].toUpperCase().replace(/[^A-Z]/,'#')))];
+    $('az').innerHTML=[...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'].map(l=>letters.includes(l)?`<a href="#L-${l}">${l}</a>`:`<span aria-hidden="true">${l}</span>`).join('');
+    let cur='';
+    $('alist').innerHTML=L.length?L.map(b=>{const l=b.name[0].toUpperCase();const hd=l!==cur?`${cur?'</div>':''}<p class="letter" id="L-${l}">${l}</p><div class="bgrid">`:'';cur=l;
+      const picks=brandPicks(b.name), cats=b.cats.filter(c=>!st.sec||c.sec===st.sec);
+      const ps=picks.length?Object.entries(picks.reduce((m,p)=>(m[p.sec]=(m[p.sec]||0)+1,m),{})).sort((a,b)=>b[1]-a[1])[0][0]:'';
+      const qq=b.name+' '+(cats[0]?cats[0].label:'');
+      return hd+`<div class="bcard"><div class="top"><span class="nm">${esc(b.name)}</span>${tierHTML(b.tier)}</div>
+        <div class="secdots">${b.secs.filter(k=>SEC[k]).map(k=>`<span class="secpill" style="--c:${accent(SEC[k])}">${esc(SEC[k].name)}</span>`).join('')}</div>
+        <p class="kn">${esc(b.known.slice(0,2).join(' · '))}</p>
+        <p class="kn" style="font-size:.8rem">${cats.slice(0,4).map(c=>`<a href="#/${c.sec}/${c.aud}/${c.key}">${esc(c.label)}${c.aud!=='all'?' ('+AUD[c.aud].toLowerCase()+')':''}</a>`).join(', ')}</p>
+        <div class="links">${picks.length?`<a class="pk" href="#/${ps}/all/-/${encodeURIComponent(b.name)}">${picks.length} pick${picks.length>1?'s':''}</a>`:''}${['Amazon','Flipkart','Myntra'].map(sn=>`<a href="${STORES[sn](encodeURIComponent(qq),qq)}" target="_blank" rel="noopener">${sn}<span class="sr"> for ${esc(b.name)}</span></a>`).join('')}</div></div>`}).join('')+'</div>':
+      `<div class="empty"><h3>No brand matches “${esc(st.q)}”</h3><p class="msg">Try another word, or clear the filters.</p></div>`;
+  };
+  $('bsearch').onsubmit=e=>{e.preventDefault();st.q=$('bq').value;draw();$('atlas').scrollIntoView({behavior:RM?'auto':'smooth'})};
+  let t;$('bq').oninput=e=>{clearTimeout(t);t=setTimeout(()=>{st.q=e.target.value;draw()},160)};
+  document.querySelectorAll('[data-bsec]').forEach(b=>b.onclick=()=>{st.sec=b.dataset.bsec;document.querySelectorAll('[data-bsec]').forEach(x=>x.setAttribute('aria-pressed',x===b));draw()});
+  document.querySelectorAll('[data-btier]').forEach(b=>b.onclick=()=>{st.tier=+b.dataset.btier;document.querySelectorAll('[data-btier]').forEach(x=>x.setAttribute('aria-pressed',x===b));draw()});
+  draw(); startFx('dials');
+}
+
+/* ---- Build a look ---- */
+const LOOKS={
+ men:{office:[['Shirt',['thread:shirts']],['Trousers',['thread:trousers']],['Shoes',['sole:formal']],['Watch',['wear:watches','wear:smartwatch']],['Bag',['wear:office','wear:backpacks']],['Scent',['glam:fragrance']]],
+  college:[['Top',['thread:tees','thread:polos']],['Jeans',['thread:jeans']],['Sneakers',['sole:sneakers','sole:sports']],['Bag',['wear:backpacks']],['Watch',['wear:smartwatch','wear:watches']],['Shades',['wear:sunglasses']]],
+  festive:[['Kurta',['thread:kurtas']],['Footwear',['sole:sandals','sole:formal']],['Watch',['wear:watches']],['Chain',['gem:menjewel']],['Scent',['glam:fragrance']],['Wallet',['wear:wallets']]],
+  party:[['Shirt',['thread:shirts','thread:polos']],['Bottoms',['thread:jeans','thread:trousers']],['Sneakers',['sole:sneakers']],['Watch',['wear:smartwatch','wear:watches']],['Scent',['glam:fragrance']],['Bracelet',['gem:menjewel']]],
+  travel:[['Tee',['thread:tees','thread:polos']],['Bottoms',['thread:track','thread:jeans','thread:shorts']],['Shoes',['sole:sneakers','sole:slippers']],['Luggage',['wear:travel','wear:trek']],['Shades',['wear:sunglasses']],['Trimmer',['glam:grooming']]]},
+ women:{office:[['Kurta set',['thread:ethnic']],['Leggings',['thread:leggings']],['Footwear',['sole:flats','sole:sneakers']],['Handbag',['wear:handbags']],['Watch',['wear:watches','wear:smartwatch']],['Earrings',['gem:earrings']]],
+  college:[['Outfit',['thread:dresses','thread:western']],['Sneakers',['sole:sneakers']],['Bag',['wear:backpacks','wear:slings']],['Earrings',['gem:earrings']],['Shades',['wear:sunglasses']],['Kajal',['glam:eyes']]],
+  festive:[['Saree or set',['thread:sarees','thread:ethnic']],['Footwear',['sole:heels','sole:flats']],['Jewellery',['gem:sets','gem:earrings']],['Bangles',['gem:bracelets']],['Anklet',['gem:anklets']],['Sling',['wear:slings']],['Lipstick',['glam:lips']]],
+  party:[['Dress',['thread:dresses']],['Footwear',['sole:heels','sole:sneakers']],['Earrings',['gem:earrings','gem:necklaces']],['Sling',['wear:slings']],['Lipstick',['glam:lips']],['Scent',['glam:fragrance']]],
+  travel:[['Outfit',['thread:dresses','thread:western']],['Footwear',['sole:sneakers','sole:floaters']],['Luggage',['wear:travel']],['Shades',['wear:sunglasses']],['Sunscreen',['glam:skincare']],['Kajal',['glam:eyes']]]}};
+const OCCN={office:'Office',college:'College',festive:'Festive & wedding',party:'Party',travel:'Travel'};
+function viewLook(){
+  setAccent(DARK?'#F2826D':'#C4452F');
+  const st=Object.assign({who:'women',occ:'festive',budget:5000},store.get('sw-look',{}));
+  let combos=[],ix=0,cur=null,cands=[];
+  $('main').innerHTML=`
+  <div class="hero"><canvas id="fx" aria-hidden="true"></canvas><div class="wrap hero-grid"><div>
+    <p class="eyebrow">Look builder · ${esc(B.name)}</p>
+    <h1>Build a <span class="r">look</span>.</h1>
+    <p class="lede">Choose who it's for, the occasion and your budget. ${esc(B.name)} puts together a full outfit from top-rated products only, and keeps it within budget.</p>
+    <div class="lookctl">
+      <div class="fld"><span class="lab" id="l-for">For</span><div class="chips" role="group" aria-labelledby="l-for">${['women','men'].map(w=>`<button type="button" class="chip" data-who="${w}" aria-pressed="${st.who===w}">${AUD[w]}</button>`).join('')}</div></div>
+      <div class="fld"><label for="l-occ">Occasion</label><select id="l-occ">${Object.entries(OCCN).map(([k,v])=>`<option value="${k}" ${st.occ===k?'selected':''}>${v}</option>`).join('')}</select></div>
+      <div class="fld"><label for="l-bud">Budget</label><span class="budgetv num" id="l-budv"></span><input id="l-bud" type="range" min="1000" max="20000" step="500" value="${st.budget}" aria-describedby="l-budv"></div>
+    </div>
+    <div class="hero-actions"><button type="button" class="btn pri" id="l-go">✨ Build my look</button><span class="msg">Every item is rated ${Number(D.minRating).toFixed(1)}★ or higher.</span></div>
+  </div>
+  <div class="dial" aria-hidden="true"><div style="position:absolute;inset:6%;border-radius:50%;background:radial-gradient(circle at 50% 38%,var(--paper),var(--acc-soft));border:1px solid var(--line)"></div>
+    <div style="position:absolute;inset:0">${dialSVG('BUILD A LOOK',false)}</div>
+    <div style="position:absolute;inset:26%;display:grid;place-items:center;font-size:clamp(4rem,10vw,7rem)" class="float">✨</div>
+    <div class="dial-tag" id="l-tag"><span style="opacity:.7">Your look</span><b id="l-tagn">—</b><span class="num" id="l-tagp"></span></div></div>
+  </div></div>
+  <section id="lookout" aria-labelledby="look-h"><div class="wrap"><div class="sec-head"><p class="eyebrow" id="l-eye"></p><h2 id="look-h">Your look</h2><p class="lede" id="l-lede" role="status" aria-live="polite"></p></div><div id="l-board"></div></div></section>
+  ${compareSection()}`;
+  const budv=()=>{$('l-budv').textContent=inr(st.budget)};budv();
+  const pool=(slot)=>slot[1].flatMap(sc=>{const [sec,cat]=sc.split(':');return P.filter(p=>p.sec===sec&&p.cat===cat&&(p.aud===st.who||p.aud==='unisex')&&p.price)}).sort((a,b)=>score(b)-score(a)).filter((p,i,a)=>a.findIndex(x=>x.id===p.id)===i);
+  const build=()=>{
+    const slots=LOOKS[st.who][st.occ]; cands=slots.map(s=>pool(s).slice(0,slots.length>6?4:5));
+    const res=[]; const pick=new Array(slots.length).fill(null);
+    (function dfs(i,cost,sc,n){if(cost>st.budget)return;if(i===slots.length){res.push({pick:[...pick],cost,v:n*100+sc});return}
+      for(const p of cands[i]){pick[i]=p;dfs(i+1,cost+p.price,sc+score(p),n+1)} pick[i]=null;dfs(i+1,cost,sc,n)})(0,0,0,0);
+    res.sort((a,b)=>b.v-a.v||a.cost-b.cost);
+    const seen=new Set();combos=res.filter(r=>{const k=r.pick.map(p=>p?p.id:'-').join();if(seen.has(k))return false;seen.add(k);return true}).slice(0,40);ix=0;
+    cur=combos[0]?combos[0].pick.slice():slots.map(()=>null);
+    store.set('sw-look',{who:st.who,occ:st.occ,budget:st.budget});render(true);
+  };
+  const render=(anim)=>{
+    const slots=LOOKS[st.who][st.occ], items=cur.map((p,i)=>({p,slot:slots[i][0],i})).filter(x=>x.p);
+    const total=items.reduce((t,x)=>t+x.p.price,0), over=total>st.budget, avg=items.length?items.reduce((t,x)=>t+x.p.rating,0)/items.length:0, buyers=items.reduce((t,x)=>t+(x.p.count||0),0);
+    const missing=slots.filter((s,i)=>!cur[i]).map(s=>s[0]);
+    $('l-eye').textContent=`${AUD[st.who]} · ${OCCN[st.occ]} · budget ${inr(st.budget)}`;
+    $('look-h').textContent=items.length?`Your ${OCCN[st.occ].toLowerCase()} look`:'No look fits yet';
+    $('l-lede').innerHTML=items.length?`${items.length} top-rated piece${items.length>1?'s':''} for <b>${inr(total)}</b>${missing.length?`. To stay within budget we left out: ${missing.map(esc).join(', ')}. Raise the budget to add ${missing.length>1?'them':'it'}.`:'.'}`:`Try a higher budget. The cheapest pieces for this occasion need more than ${inr(st.budget)}.`;
+    $('l-tagn').textContent=items.length?`${items.length} pieces`:'—'; $('l-tagp').textContent=items.length?`${inr(total)} · ${avg.toFixed(1)}★ avg`:'';
+    const share=`My ${OCCN[st.occ].toLowerCase()} look from ${B.name} (${inr(total)}):\n`+items.map(x=>`• ${x.slot}: ${x.p.brand} ${x.p.short||x.p.name} ${inr(x.p.price)}, ${x.p.rating.toFixed(1)}★ ${x.p.url}`).join('\n')+`\nBuild yours: ${siteURL()}#/look`;
+    $('l-board').innerHTML=items.length?`<div class="lookboard"><div class="lookitems">${items.map((x,k)=>{const p=x.p,inW=WL.has(p.id),alt=cands[x.i].length>1;
+      return `<article class="litem" style="animation-delay:${anim&&!RM?k*90:0}ms;--acc:${accent(SEC[p.sec])};--acc-soft:color-mix(in srgb, ${accent(SEC[p.sec])} 16%, #fff)"><div class="la"><span class="slot">${esc(x.slot)}</span>${art(p.shape)}</div><div class="lb"><small>${esc(p.brand)}</small><span class="nm">${esc(p.name)}</span><span class="muted" style="font-size:.8rem">${p.rating.toFixed(1)}★ from ${esc(countLabel(p))} · ${esc(SEC[p.sec].name)}</span><span class="pr">${inr(p.price)}${p.mrp?`<s class="muted" style="font-size:.78rem;margin-left:6px">${inr(p.mrp)}</s>`:''}</span>
+        <div class="acts"><a class="buy" href="${esc(p.url)}" target="_blank" rel="noopener">Find on ${esc(p.where)}<span class="sr"> ${esc(p.brand+' '+p.name)}</span></a>${alt?`<button type="button" class="ic2" data-swap="${x.i}">⇄ Swap<span class="sr"> ${esc(x.slot)}</span></button>`:''}<button type="button" class="ic2 heart" data-wl="${p.id}" aria-pressed="${inW}">${inW?'♥ Saved':'♡ Save'}<span class="sr"> ${esc(p.brand+' '+p.name)}</span></button></div></div></article>`}).join('')}</div>
+      <aside class="lsum" aria-label="Look summary"><p class="eyebrow" style="color:#E7A36C">Look total</p><div class="big num">${inr(total)}</div><div class="meter" aria-hidden="true"><i id="l-meter" style="${over?'background:var(--heart)':''}"></i></div>
+        <div class="row2"><span>${over?`<b style="color:#F2826D">${inr(total-st.budget)} over budget</b>`:`${inr(st.budget-total)} left`}</span><span>budget ${inr(st.budget)}</span></div>
+        <div class="row2" style="margin-top:10px"><span>Average rating</span><b style="color:var(--mist)">${avg.toFixed(1)}★</b></div><div class="row2"><span>Buyer ratings behind it</span><b style="color:var(--mist)">${buyers.toLocaleString('en-IN')}</b></div>
+        <div class="hero-actions"><button type="button" class="btn pri" id="l-shuf" ${combos.length>1?'':'disabled'}>🔀 Another look</button><button type="button" class="btn ghost" id="l-saveall">♡ Save all</button>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(share)}">Share on WhatsApp</a></div>
+        <p class="msg" style="margin-top:10px;color:color-mix(in srgb,var(--mist) 70%,transparent)">${combos.length>1?`Look ${ix+1} of ${combos.length} that fit your budget. `:''}Prices are the last ones we saw; check the store before buying.</p></aside></div>`
+      :`<div class="empty"><h3>Nothing fits ${inr(st.budget)} yet</h3><p class="msg">Move the budget slider up and build again.</p></div>`;
+    requestAnimationFrame(()=>{const m=$('l-meter');if(m)m.style.width=Math.min(100,total/st.budget*100)+'%'});
+    document.querySelectorAll('[data-swap]').forEach(b=>b.onclick=()=>{const i=+b.dataset.swap,L=cands[i],k=L.findIndex(p=>p.id===cur[i].id);cur[i]=L[(k+1)%L.length];render(false)});
+    if($('l-shuf'))$('l-shuf').onclick=()=>{ix=(ix+1)%combos.length;cur=combos[ix].pick.slice();render(true);if(FX&&FX.burst)FX.burst()};
+    if($('l-saveall'))$('l-saveall').onclick=()=>{items.forEach(x=>WL.add(x.p.id));store.set('sw-wl',[...WL]);const n=$('wl-n');if(n)n.textContent=WL.size;render(false);$('l-saveall').textContent='♥ All saved'};
+  };
+  document.querySelectorAll('[data-who]').forEach(b=>b.onclick=()=>{st.who=b.dataset.who;document.querySelectorAll('[data-who]').forEach(x=>x.setAttribute('aria-pressed',x===b));build()});
+  $('l-occ').onchange=e=>{st.occ=e.target.value;build()};
+  let bt;$('l-bud').oninput=e=>{st.budget=+e.target.value;budv();clearTimeout(bt);bt=setTimeout(build,250)};
+  $('l-go').onclick=()=>{build();if(FX&&FX.burst)FX.burst();$('lookout').scrollIntoView({behavior:RM?'auto':'smooth'})};
+  build(); startFx('ribbons');
+}
+
 function viewSaved(){
   setAccent(DARK?'#FF8A7A':'#C0392B');
   const L=P.filter(p=>WL.has(p.id));
@@ -808,22 +1121,24 @@ if('serviceWorker' in navigator && location.protocol==='https:') navigator.servi
 /* ================= router ================= */
 function route(){
   timers.forEach(clearInterval); timers=[]; document.body.classList.remove('monsoon-on');
-  const [,a,b]=(location.hash||'#/').split('/');
+  const [,a,b,c,d]=(location.hash||'#/').split('/').map(x=>decodeURIComponent(x||''));
   const key=(a||'').toLowerCase();
-  CUR=SEC[key]?key:key==='saved'?'saved':'home';
+  CUR=SEC[key]?key:['saved','brands','look'].includes(key)?key:'home';
   nav();
   if(CUR==='home') viewHome();
   else if(CUR==='saved') viewSaved();
+  else if(CUR==='brands') viewBrands(b);
+  else if(CUR==='look') viewLook();
   else if(CUR==='wrap') viewWrap();
   else if(CUR==='deal') viewDeal();
-  else viewSection(CUR,['men','women','kids'].includes(b)?b:'all');
+  else viewSection(CUR,['men','women','kids'].includes(b)?b:'all',c&&c!=='-'?c:'',d||'');
   renderCompare(); tray(); wireRequest();
   document.querySelectorAll('.stats [data-count]').forEach(countUp);
   if('IntersectionObserver' in window&&!RM){document.querySelectorAll('main section .wrap').forEach(el=>{el.classList.add('reveal');});
     const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');fillBars(e.target);io.unobserve(e.target)}}),{threshold:.04});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));}
   if($('compare')&&'IntersectionObserver' in window) new IntersectionObserver(es=>{$('cbar').style.visibility=es[0].isIntersecting?'hidden':''}).observe($('compare'));
-  const title=CUR==='home'?B.name+' · '+B.tagline:(SEC[CUR]?SEC[CUR].name:'Saved')+' · '+B.name; document.title=title;
+  const title=CUR==='home'?B.name+' · '+B.tagline:(SEC[CUR]?SEC[CUR].name:{saved:'Saved',brands:'Brand Atlas',look:'Build a look'}[CUR])+' · '+B.name; document.title=title;
   scrollTo(0,0); const h=document.querySelector('main h1, main h2'); if(h&&route.started){h.setAttribute('tabindex','-1');h.focus({preventScroll:true})} route.started=true;
 }
 addEventListener('hashchange',()=>{const h=location.hash||'#/'; if(h==='#'||h.startsWith('#/')) route();});

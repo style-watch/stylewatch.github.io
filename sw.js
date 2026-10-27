@@ -1,6 +1,6 @@
 /* StyleWatch offline support: the app shell is cached; data is always fetched fresh when online. */
-const CACHE='stylewatch-v2';
-const SHELL=['./','index.html','data/brand.js','data/catalog.js','manifest.webmanifest','icons/icon.svg','icons/icon-192.png'];
+const CACHE='stylewatch-v3';
+const SHELL=['./','index.html','data/brand.js','data/catalog.js','data/taxonomy.js','manifest.webmanifest','icons/icon.svg','icons/icon-192.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',e=>{
